@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-toolbar color="primary">
+   
+    <ion-title>Image Selection</ion-title>
+   <!--     <ion-buttons  *ngIf="croped"  slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="clear()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="!myFile">
+    <img src="assets/img/image-backgorund.jpg" padding style="width:100%">
+  </div>
+
+  <ion-row padding>
+   <!--  <ion-button *ngIf="mobile" expand="full" (click)="presentActionSheet()">
+      Upload Image
+    </ion-button> -->
+      <ion-button *ngIf="mobile" expand="full" (click)="fromcamera()">Camera
+    </ion-button>
+        <!-- <ion-button *ngIf="mobile" expand="full" (click)="pickImage()"> -->
+          <ion-button *ngIf="mobile" expand="full"  (click)="mobileupload()">
+      
+      Gallery
+    </ion-button>
+  </ion-row>
+  <ion-row padding>
+    <input type="file" [hidden]="true" multiple="multiple" capture="camera" #fileInput accept="image/*,application/pdf"
+      (change)="browsePhoto($event)">
+    <ion-button *ngIf="!isCordova" expand="block" (click)="fileInput.click()">Upload
+    </ion-button>
+
+  </ion-row>
+
+    <ion-item-divider *ngIf="myFile">
+    <ion-label>
+      Current Image
+    </ion-label>
+  </ion-item-divider>
+ <div  *ngIf="myFile  && !croped && mobile && !saved">
+
+   <img class="selected_image" [src]="myFile" width="100%" height="100%" padding>
+
+ </div>
+  <div  *ngIf="myFile && !croped && !saved && !isCordova">
+
+   <img class="selected_image" [src]="myFile" width="100%" height="100%" padding>
+
+ </div>
+  <div style="padding:20px;" *ngIf="myFile && croped && mobile && !saved">
+      <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-button ion-button slot="icon-only"  (click)="closecrop()">
+      <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crop Image</ion-title>
+    <ion-buttons slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="clear()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+    <!-- <img class="selected_image" [src]="myFile" width="100%" height="100%" padding> -->
+    <angular-cropper (touchstart)="cropperTouchStart($event)" #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="myFile" *ngIf="myFile"></angular-cropper>
+  
+
+  </div>
+
+  <div style="padding:20px;"  *ngIf="myFile && croped && !saved && !isCordova">
+      <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-button ion-button slot="icon-only"  (click)="reset()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crop Image</ion-title>
+    <ion-buttons slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="clear()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+     <!-- <img class="selected_image" [src]="myFile"  width="100%" height="100%" padding> -->
+    
+      <angular-cropper (touchstart)="cropperTouchStart($event)" #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="myFile" *ngIf="myFile"></angular-cropper>
+
+  </div>
+  <div *ngIf="saved">
+    <img class="selected_image" [src]="myFile" padding>
+   <!--    <angular-cropper #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="myFile" *ngIf="myFile"></angular-cropper> -->
+
+  </div>
+
+
+  <ion-row padding-left padding-right>
+    <ion-col col-4>
+      <ion-button  expand="full" (click)='moveToPrevious()'
+        [disabled]="!(myFile && isimage) || previousFiles.length==0">
+        Undo Crop
+      </ion-button>
+    </ion-col>
+<!--     <ion-col  col-4>
+      <ion-button expand="full" (click)='clear()' [disabled]="!(myFile && isimage && !saved)">
+        Reset
+      </ion-button>
+    </ion-col> -->
+    <ion-col col-4>
+       <ion-button  *ngIf="!isCordova" expand="full" (click)='docrop()' [disabled]="!(myFile && isimage)" color="success">
+        Crop
+        <ion-icon name="checkmark-circle"> </ion-icon>
+      </ion-button>
+ <!--       <ion-button  *ngIf="!isCordova" expand="full" (click)='opencrop()' [disabled]="!(myFile && isimage)">
+        Crop
+      </ion-button> -->
+     <!--   <ion-button  *ngIf="mobile" expand="full" (click)='opencrop()' [disabled]="!(myFile && isimage)"> -->
+      <ion-button  *ngIf="mobile" expand="full" (click)='docrop()' [disabled]="!(myFile && isimage)" color="success">
+       
+        Crop
+        <ion-icon name="checkmark-circle"> </ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row padding-left padding-right *ngIf="myFile && buttonClicked">
+    <!-- <ion-row padding-left padding-right *ngIf="myFile "> -->
+    <ion-col col-8>
+      
+         
+         <ion-row>  
+ <ion-input *ngIf="isdate" #inpName (ngModelChange)="updatename($event)"   [ngModel]="newName" type="text" placeholder="Type new filename" >
+  </ion-input>
+  <ion-input *ngIf="!isdate" #inpName (ngModelChange)="updatename($event)"   [ngModel]="newName" type="text" placeholder="Type new filename" > 
+    
+       </ion-input>
+          <label style="padding: 10px; margin-left: 20px;">{{Ext}} </label>
+    
+ </ion-row>
+    </ion-col>
+ 
+  </ion-row>
+     <ion-col col-4 *ngIf="myFile && buttonClicked">
+      <ion-button expand="full" (click)='setNewFileName()'>
+        Update File
+      </ion-button>
+    </ion-col>
+  <!-- <ion-row padding-left padding-right *ngIf="image && !buttonClicked"> -->
+      <ion-row padding-left padding-right *ngIf="myFile && !buttonClicked">
+    <ion-col padding-top col-8>
+      <p padding-left >{{imageName}}</p>
+       <!-- <p padding-left  *ngIf="isdate">{{imageName| date : "mm-dd-yyyy hh-mm"}}</p> -->
+    </ion-col>
+  
+  </ion-row>
+     <ion-col padding-top col-4 *ngIf="myFile && !buttonClicked">
+      <ion-button expand="full" (click)='editFileName()'>
+        Rename File
+      </ion-button>
+    </ion-col>
+  
+</ion-content>
+<ion-footer>
+  <ion-button *ngIf="donecropping" expand="full" (click)='saveImage()' [disabled]="!myFile">
+    Continue &nbsp;
+    <ion-icon name="send"></ion-icon>
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,22 @@
+page-login,
+.login {
+}
+.custom-select{
+    min-width: 100% !important;
+}
+.item-md {
+    padding-left: 0px;
+}
+.custom-list{
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    padding-top:1px;
+
+}
+
+.item-md ion-icon[item-left] + .item-inner,
+.item-md ion-icon[item-left] + .item-input,
+.item-md ion-icon[item-start] + .item-inner,
+.item-md ion-icon[item-start] + .item-input {
+  margin-left: 0px;
+}

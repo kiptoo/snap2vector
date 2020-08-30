@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-buttons start>
+      <button ion-button icon-only left (click)="dismiss()"><ion-icon ios="ios-close" md="md-close"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>Update Company Name</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <div class="card"  margin-bottom>
+    <div padding>
+        <ion-row>   
+        <ion-col>
+          <ion-item no-padding *ngIf="!userObj?.company">
+            <ion-input type="text" placeholder="Enter company name" [(ngModel)]="company"></ion-input>
+          </ion-item>
+          <ion-item no-padding *ngIf="userObj?.company">
+              <ion-input type="text" placeholder="{{userObj?.company}}" [(ngModel)]="company"></ion-input>
+            </ion-item>
+        </ion-col>
+        </ion-row>
+        <button ion-button color="primary" margin-top full tappable (click)="updateCompanyName()">Update Company name</button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button slot="icon-only" (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Request Revision</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card padding-bottom>
+    <ion-item>
+      <ion-textarea placeholder="Enter instructions for designer..." rows="8" [(ngModel)]="instructions"></ion-textarea>
+    </ion-item>
+ <!--     <div *ngIf="!myFile">
+    <img src="assets/img/image-backgorund.jpg" padding style="width:100%">
+  </div> -->
+
+  <ion-row padding>
+   <!--  <ion-button *ngIf="mobile" expand="full" (click)="presentActionSheet()">
+      Upload Image
+    </ion-button> -->
+      <ion-button *ngIf="mobile" expand="full" (click)="fromcamera()">
+      Camera
+    </ion-button>
+        <!-- <ion-button *ngIf="mobile" expand="full" (click)="pickImage()"> -->
+          <ion-button *ngIf="mobile" expand="full"  (click)="mobileupload()">
+      Gallery
+    </ion-button>
+  </ion-row>
+  <ion-row padding>
+    <input type="file" [hidden]="true" multiple="multiple" capture="camera" #fileInput accept="image/*,application/pdf"
+      (change)="browsePhoto($event)">
+    <ion-button *ngIf="!isCordova" expand="block" (click)="fileInput.click()">Upload
+    </ion-button>
+
+  </ion-row>
+
+    <ion-item-divider *ngIf="myFile">
+    <ion-label>
+      Current Image
+    </ion-label>
+  </ion-item-divider>
+ <div  *ngIf="myFile  && !croped && mobile && !saved">
+
+   <img class="selected_image" [src]="myFile" width="100%" height="100%" padding>
+
+ </div>
+  <div  *ngIf="myFile && !croped && !saved && !isCordova">
+
+   <img class="selected_image" [src]="myFile" width="100%" height="100%" padding>
+
+ </div>
+  <div style="padding:20px;" *ngIf="myFile && croped && mobile && !saved">
+      <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-button ion-button slot="icon-only"  (click)="closecrop()">
+      <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crop Image</ion-title>
+    <ion-buttons slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="clear()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+    <!-- <img class="selected_image" [src]="myFile" width="100%" height="100%" padding> -->
+    <angular-cropper (touchstart)="cropperTouchStart($event)" #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="myFile" *ngIf="myFile"></angular-cropper>
+  
+
+  </div>
+
+  <div style="padding:20px;"  *ngIf="myFile && croped && !saved && !isCordova">
+      <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-button ion-button slot="icon-only"  (click)="reset()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crop Image</ion-title>
+    <ion-buttons slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="clear()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+     <!-- <img class="selected_image" [src]="myFile"  width="100%" height="100%" padding> -->
+    
+      <angular-cropper (touchstart)="cropperTouchStart($event)" #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="myFile" *ngIf="myFile"></angular-cropper>
+
+  </div>
+  <div *ngIf="saved">
+    <img class="selected_image" [src]="myFile" padding>
+   <!--    <angular-cropper #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="myFile" *ngIf="myFile"></angular-cropper> -->
+
+  </div>
+
+
+  <ion-row padding-left padding-right>
+    <ion-col col-4>
+      <ion-button  expand="full" (click)='moveToPrevious()'
+        [disabled]="!(myFile && isimage) || previousFiles.length==0">
+        Undo Crop
+      </ion-button>
+    </ion-col>
+<!--     <ion-col  col-4>
+      <ion-button expand="full" (click)='clear()' [disabled]="!(myFile && isimage && !saved)">
+        Reset
+      </ion-button>
+    </ion-col> -->
+    <ion-col col-4>
+       <ion-button  *ngIf="!isCordova" expand="full" (click)='docrop()' [disabled]="!(myFile && isimage)">
+        Crop
+      </ion-button>
+ <!--       <ion-button  *ngIf="!isCordova" expand="full" (click)='opencrop()' [disabled]="!(myFile && isimage)">
+        Crop
+      </ion-button> -->
+     <!--   <ion-button  *ngIf="mobile" expand="full" (click)='opencrop()' [disabled]="!(myFile && isimage)"> -->
+      <ion-button  *ngIf="mobile" expand="full" (click)='docrop()' [disabled]="!(myFile && isimage)">
+       
+        Crop
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row padding-left padding-right *ngIf="myFile && buttonClicked">
+    <!-- <ion-row padding-left padding-right *ngIf="myFile "> -->
+    <ion-col col-8>
+     <!--  <ion-input #inpName [(ngModel)]="newName" type="text" placeholder="Type new filename">
+      </ion-input> -->
+           <ion-row>  
+      <ion-input #inpName [(ngModel)]="newName" type="text" placeholder="Type new filename">
+    
+       </ion-input>
+          <label style="padding: 10px; margin-left: 20px;">{{Ext}} </label>
+    
+ </ion-row>
+
+    </ion-col>
+    <ion-col col-4>
+      <ion-button expand="full" (click)='setNewFileName()'>
+        Update
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-row padding-left padding-right *ngIf="image && !buttonClicked"> -->
+      <ion-row padding-left padding-right *ngIf="myFile && !buttonClicked">
+    <ion-col padding-top col-8>
+      <p padding-left>{{imageName}}</p>
+    </ion-col>
+    <ion-col padding-top col-4>
+      <ion-button expand="full" (click)='editFileName()'>
+        Rename
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" (click)='sendRequest()' [disabled]="!myFile || instructions===''">
+    Submit Revision &nbsp;
+    <ion-icon name="send"></ion-icon>
+  </ion-button>
+</ion-footer>

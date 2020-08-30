@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button slot="icon-only" (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Update Contact No Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card" margin-bottom>
+    <div padding>
+      <ion-row>
+        <ion-col>
+          <ion-item no-padding>
+             <p>Your Current Number:</p> {{userData?.phone}}
+          </ion-item>
+          <ion-item no-padding>
+            <ion-input type="text" maxlength="10" placeholder="Enter 10 digits phone number" [(ngModel)]="phone" pattern="[0-9]*"
+              (keyup)="phonelimit($event)" (blur)="phonelimit($event)" (focus)="phonelimit($event)"></ion-input>
+          </ion-item>
+          <ion-item no-padding no-lines>
+            <ion-text color="primary">*for SMS Notification</ion-text>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-button *ngIf="userData.phone" color="primary" margin-top size="full" tappable (click)="updatePhoneNo()">Update Phone No
+      </ion-button>
+        <ion-button *ngIf="!userData.phone" color="primary" margin-top size="full" tappable (click)="updatePhoneNo()">Save Phone No
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

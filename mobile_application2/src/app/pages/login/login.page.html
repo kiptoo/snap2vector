@@ -1,0 +1,55 @@
+<ion-content padding>
+  <form margin-top #form="ngForm" class="animated fade-in" [formGroup]="loginForm">
+    <ion-grid margin-top>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div padding class="logo-container animated fade-in-down">
+            <div class="logo">
+              <img src="assets/img/ionic4-ico.png" />
+            </div>
+          </div>
+          <div padding margin-top>
+            <ion-item>
+              <ion-label position="floating">
+                <ion-icon name="mail"></ion-icon>
+                Email
+              </ion-label>
+              <ion-input name="email" type="email" formControlName="email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">
+                <ion-icon name="lock"></ion-icon>
+                Password
+              </ion-label>
+              <ion-input name="password" type="password" formControlName="password" required></ion-input>
+            </ion-item>
+          </div>
+          <ion-text color="secondary" class="forgot-password ion-text-start" tappable (click)="forgotPass()">
+            <strong>Forgot Password?</strong>
+          </ion-text>
+          <div padding-top>
+            <ion-button type="submit" (click)="login()" color="dark" [disabled]="form.invalid" expand="block">
+              SIGN IN
+              <ion-icon name="log-in"></ion-icon>
+            </ion-button>
+          </div>
+          <div padding-top>
+            <ion-button type="submit" (click)="googleLogin()" color="danger" expand="block">
+              GOOGLE LOGIN
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row margin-top class="ion-justify-content-around">
+        <ion-col>
+          <ion-text color="secondary" (click)="goToRegister()" class="bottom-links" tappable>New here?
+            <strong>Sign up</strong></ion-text>
+        </ion-col>
+        <ion-col>
+          <ion-text color="secondary" (click)="openPrivacyPolicy()" class="bottom-links" tappable>Privacy
+            Policy</ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

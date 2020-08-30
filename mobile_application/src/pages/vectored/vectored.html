@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+    </button>
+    <ion-title>
+      <strong>Delivered Files</strong>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-list no-margin>
+      <ion-item class="vector-item" *ngFor="let vector of vectorizedImages" padding-left>
+        <ion-row>
+          <ion-col col-3>
+            <ion-thumbnail style="display:inline-block">
+              <img [src]="vector.url" onError="this.src='assets/img/image-backgorund.jpg'">
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col col-9>
+            <p class="image-name">{{vector.originalname}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col margin-right>
+              <button ion-button full (click)='download(vector.originalname, vector.url)'>
+                Download
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button full (click)='open(vector.originalname, vector.url)'>
+                Open
+              </button>
+            </ion-col>
+            <ion-col margin-left>
+              <button ion-button *ngIf="platform.is('cordova')" full (click)='share(vector.originalname, vector.url)'>
+                Share
+              </button>
+              <ion-fab *ngIf="!platform.is('cordova')" bottom right>
+                <button ion-fab>
+                  <ion-icon name="share"></ion-icon>
+                </button>
+                <ion-fab-list color="primary" side="left">
+                  <button ion-fab color="primary">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </button>
+                  <button ion-fab color="secondary">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </button>
+                </ion-fab-list>
+              </ion-fab>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

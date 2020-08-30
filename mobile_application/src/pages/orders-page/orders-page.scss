@@ -1,0 +1,39 @@
+page-orders-page{
+  .order_item{
+    border-top: 1px solid gray !important;
+  }
+  .image_name{
+    font-size: 1em;
+    color:#4c6df9;
+    position: relative;;
+    top: 40%;
+    //margin-left: 2%;
+    //width: 11.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    line-height: 22px;
+    padding-right: 1em;
+  }
+  .new_badge{
+    position: absolute;
+    z-index: 10;
+    right: 0%;
+    top: 10%;
+    font-size: 0.75em;
+    padding: 4px 6px 4px 6px;
+    border-radius: 1em;
+  }
+  .new_badge_last{
+    position: absolute;
+    z-index: 10;
+    right: 10%;
+    top: 10%;
+    font-size: 0.75em;
+    padding: 4px 6px 4px 6px;
+    border-radius: 1em;
+  }
+  .padding-right-8px{
+    padding-right: 8px;
+  }
+}

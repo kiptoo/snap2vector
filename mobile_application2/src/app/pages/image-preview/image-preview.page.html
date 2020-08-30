@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button slot="icon-only" (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Delivered Files</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- <ion-buttons end>
+    <ion-button (click)="dismiss()" class="button" slot="icon-only" clear>
+      <ion-icon class="icon" name="close"></ion-icon>
+    </ion-button>
+  </ion-buttons> -->
+  
+    <!-- <img class="image" [src]="url"> -->
+<!-- 
+<ion-card >
+    <ion-card-header color="primary">Preview order</ion-card-header>
+    <ion-card-content  *ngFor="let vector of vectors" > -->
+   <!-- <div > -->
+   	<!-- <ion-card > -->
+  <!-- <ion-list > -->
+   <ion-card padding-bottom  *ngFor="let vector of vectors">
+  	<ion-card-content>
+   
+
+  <!--       <ion-list-header>
+          Online
+        </ion-list-header> -->
+ <ion-item>
+         <!--  <ion-avatar slot="start">
+            <img src="./avatar-poe.png">
+          </ion-avatar> -->
+            <!-- <img  [src]="vector.url" /> -->
+              <ion-thumbnail style="display:inline-block">
+        <img  [src]="vector.url" />
+         </ion-thumbnail>
+          <ion-label style="margin-left: 20px">
+            <h2>Name: {{vector.originalname}}</h2>
+            <h3>Date: {{vector.created |  date : "fullDate"}}</h3>
+            <p>URL: {{vector.url}}</p>
+          </ion-label>
+
+
+        </ion-item>
+
+     <ion-segment  color="dark">
+     <!--    <ion-segment-button (click)="download(image.filename, image.url, order)">
+          <ion-label>Save</ion-label>
+          <ion-icon name="download"></ion-icon>
+        </ion-segment-button> -->
+        <ion-segment-button (click)="download(vector.originalname, vector.url, vector.order)" checked>
+        <!-- <ion-segment-button  checked> -->
+          <ion-label>Download</ion-label>
+          <ion-icon name="download"></ion-icon>
+        </ion-segment-button>
+      <ion-segment-button  *ngIf="isCordova"  (click)="share(vector.originalname, vector.url,vector.order)">
+          <ion-label>Share</ion-label>
+          <ion-icon name="share"></ion-icon>
+        </ion-segment-button>
+      <!--   <ion-segment-button  *ngIf="isCordova"  (click)="share(image.filename, image.url,order)">
+          <ion-label>Share</ion-label>
+          <ion-icon name="share"></ion-icon>
+        </ion-segment-button> -->
+      </ion-segment>
+   </ion-card-content>
+      </ion-card>
+ 
+ <!-- </ion-list> -->
+ <!-- </div> -->
+<!-- </ion-card-content>
+</ion-card> -->
+
+</ion-content>
+<!-- <ion-footer>
+  <ion-button expand="full" (click)='sendRequest()' [disabled]="!myFile || instructions===''">
+    Submit Revision &nbsp;
+    <ion-icon name="send"></ion-icon>
+  </ion-button>
+</ion-footer> -->

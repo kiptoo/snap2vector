@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-buttons start>
+      <button ion-button icon-only left (click)="dismiss()">
+        <ion-icon ios="ios-close" md="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Update Contact No Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <div class="card" margin-bottom>
+    <div padding>
+      <ion-row>
+        <ion-col>
+          <ion-item no-padding>
+            <ion-input type="number" maxlength="10" placeholder="Enter 10 digits phone number" [(ngModel)]="phone"
+              (keyup)="phonelimit($event)" (blur)="phonelimit($event)" (focus)="phonelimit($event)"></ion-input>
+          </ion-item>
+          <ion-item no-padding no-lines>
+            <p class="forSMS-label">*for SMS Notification</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <button ion-button color="primary" margin-top full tappable (click)="updatePhoneNo()">Update Phone No</button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,13 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+node_modules
+
+package-lock.json.orig
+# exclude everything
+static/images/user-uploads/*
+static/images/designer-uploads/*
+
+# exception to the rule
+!static/images/user-uploads/.gitkeep 
+!static/images/designer-uploads/.gitkeep 

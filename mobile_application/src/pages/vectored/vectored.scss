@@ -1,0 +1,18 @@
+page-vectored{
+  .image-name{
+    font-size: 1em;
+    color:#4c6df9;
+    position: relative;;
+    top: 40%;
+    //margin-left: 2%; 
+    //width: 11.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    line-height: 22px;
+    padding-right: 1em;
+  }
+  .vector-item{
+    border-bottom: 1px solid lightgray;
+  }
+}

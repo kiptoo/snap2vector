@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-buttons start>
+      <button ion-button icon-only left (click)="dismiss()">
+        <ion-icon ios="ios-close" md="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Update Credit Card Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+
+  <form action="/" method="post" #paymentForm>
+
+    <div class="form-row">
+      <div id="card-element">
+        <!-- a Stripe Element will be inserted here. -->
+      </div>
+
+      <!-- Used to display Element errors -->
+      <div #cardErrors role="alert"></div>
+    </div>
+
+    <button ion-button color="primary" margin-top full tappable>Add Credit Card</button>
+
+
+    <ion-row align-items-center padding-bottom padding-left padding-right>
+      <ion-col>
+        Add your credit card details
+      </ion-col>
+    </ion-row>
+
+
+  </form>
+
+</ion-content>

@@ -1,0 +1,182 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" slot="icon-only">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>SnapToVector</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-divider [color]="vectorObj.price==='' && isError ? 'danger' : 'primary'">Basic
+    Details
+  </ion-item-divider>
+
+  <ion-list class="bottom-border" id="price"  name="price">
+    <ion-radio-group  *ngFor ="let p of prices" name="price" [(ngModel)]="vectorObj.price" (ngModelChange)="updateLogoTypePrice($event)">
+      <ion-item>
+        <ion-label>{{p.name}}</ion-label>
+        <ion-radio value={{p.value}}>{{p.name}}</ion-radio>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label>$20 - Detail Logo</ion-label>
+        <ion-radio value="20">$20 - Detail Logo</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>$35 - Complex Logo</ion-label>
+        <ion-radio value="35">$35 - Complex Logo</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>$45 - Very Complex Logo</ion-label>
+        <ion-radio value="45">$45 - Very Complex Logo</ion-radio>
+      </ion-item> -->
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item-group>
+    <ion-item-divider color="primary">Required Earlier - Less than 24 hours</ion-item-divider>
+    <ion-item>
+      <ion-label>
+        Rush! Rush! - Add ${{rush.value}}
+      </ion-label>
+      <!-- <ion-checkbox slot="start" [disabled]="isRushdisabled==true" [(ngModel)]="vectorObj.isUrgent"
+        (ionChange)="updatePriceForUrgent()"></ion-checkbox> -->
+         <ion-checkbox slot="start"  [(ngModel)]="vectorObj.isUrgent"
+        (ionChange)="updatePriceForUrgent()"></ion-checkbox>
+    </ion-item>
+    <ion-item-divider [color]="vectorObj.artwork==='' && isError ? 'danger' : 'primary'">
+      Artwork For?
+    </ion-item-divider>
+    <ion-list>
+      <ion-radio-group id="artwork" nanm="artwork" [(ngModel)]="vectorObj.artwork">
+        <ion-item>
+          <ion-label>Screen Printing</ion-label>
+          <ion-radio value="Screen Printing">Screen Printing</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Digital Printing - DTG</ion-label>
+          <ion-radio value="Digital Printing - DTG">Digital Printing - DTG</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Other</ion-label>
+          <ion-radio value="Other">Other</ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-item-divider [color]="vectorObj.scheme==='' && isError ? 'danger' : 'primary'">Color
+      Scheme
+    </ion-item-divider>
+    <ion-list padding-bottom>
+      <ion-radio-group id="scheme" name="scheme" [(ngModel)]="vectorObj.scheme">
+        <ion-item>
+          <ion-label>Black & White - 1 Color</ion-label>
+          <ion-radio value="Black White Color">Black & White - 1 Color</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Black & White - with halftones</ion-label>
+          <ion-radio value="Black White Halftones">Black & White - with halftones </ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Spot Color No Halftones</ion-label>
+          <ion-radio value="Spot Color">Spot Color No Halftones</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Spot Color with Halftones</ion-label>
+          <ion-radio value="Spot Color Halftones">Spot Color with Halftones</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Full Color CMYK</ion-label>
+          <ion-radio value="CMYK">Full Color CMYK</ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-item-divider id="fileFormat" [color]="vectorObj.fileFormat==='' && isError ? 'danger' : 'primary'" tappable
+      (click)="toggleSection()"   detail-none [ngClass]="{'section-active': fileListOpen, 'section': !fileListOpen}">
+      <ion-label style="margin:13px 0px">
+        File Format
+      </ion-label>
+      <ion-icon slot="start" size="small" style="margin:7px" name="add" *ngIf="!fileListOpen" padding-right></ion-icon>
+      <ion-icon slot="start" size="small" style="margin:7px" name="remove" *ngIf="fileListOpen" padding-right>
+      </ion-icon>
+    </ion-item-divider>
+    <ion-list class="custom-list" *ngIf="fileListOpen" lines="none">
+      <ion-radio-group name="format" [(ngModel)]="vectorObj.fileFormat">
+        <ion-item>
+          <ion-label>Coral Draw 12</ion-label>
+          <ion-radio value="12">Coral Draw 12</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Coral Draw X3</ion-label>
+          <ion-radio value="X3">Coral Draw X3</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Coral Draw X4</ion-label>
+          <ion-radio value="X4">Coral Draw X4</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Coral Draw X5</ion-label>
+          <ion-radio value="X5">Coral Draw X5</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Coral Draw X6</ion-label>
+          <ion-radio value="X6">Coral Draw X6</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Coral Draw X7</ion-label>
+          <ion-radio value="X7">Coral Draw X7</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Illustrator 10</ion-label>
+          <ion-radio value="10">Illustrator 10</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Illustrator CS</ion-label>
+          <ion-radio value="CS">Illustrator CS</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Illustrator CS2</ion-label>
+          <ion-radio value="CS2">Illustrator CS2</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Illustrator CS3</ion-label>
+          <ion-radio value="CS3">Illustrator CS3</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Illustrator CS4</ion-label>
+          <ion-radio value="CS4">Illustrator CS4</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Illustrator CS5</ion-label>
+          <ion-radio value="CS5">Illustrator CS5</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Illustrator CS6</ion-label>
+          <ion-radio value="CS6">Illustrator CS6</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>EPS</ion-label>
+          <ion-radio value="EPS">EPS</ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>PDF</ion-label>
+          <ion-radio value="PDF">PDF</ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+  <!--   <ion-item-divider color="primary">Special Instructions</ion-item-divider>
+    <ion-item>
+      <ion-textarea placeholder="Enter message for designer..." rows="5" [(ngModel)]="vectorObj.instructions">
+      </ion-textarea>
+    </ion-item> -->
+  </ion-item-group>
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" color="dark" (click)="placeOrder()">
+    ${{vectorObj?.amount | number : '1.2-2' }} - Continue
+  </ion-button>
+</ion-footer>

@@ -1,0 +1,273 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+    </button>
+    <ion-title>My Orders</ion-title>
+    <ion-buttons end padding-right>
+      <button tappable ion-button (click)=refreshList() item-right large>
+        <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end padding-right>
+      <button tappable ion-button (click)=message() item-right large>
+        <ion-icon item-left ios="ios-text" md="md-text"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-segment [(ngModel)]="orderTabs">
+    <ion-segment-button value="inProgress" (click)="switchTo('inProgress')">
+      In Progress
+    </ion-segment-button>
+    <ion-segment-button value="attentionRequired"
+      (click)="switchTo('attentionRequired');orderViewed('attentionRequired')">
+      Attention Req
+      <ion-badge class="new_badge" *ngIf="att_new_count>0" item-end>{{att_new_count}}</ion-badge>
+    </ion-segment-button>
+    <ion-segment-button value="completed" (click)="switchTo('completed');orderViewed('completed')">
+      Completed
+      <ion-badge class="new_badge_last" *ngIf="comp_new_count>0" item-end>{{comp_new_count}}</ion-badge>
+    </ion-segment-button>
+  </ion-segment>
+  <ng-container [ngSwitch]="orderTabs">
+    <ng-container *ngSwitchCase="'inProgress'">
+      <ion-row>
+        <h5 [hidden]="!inprogressOrders || inprogressOrders?.length!=0" text-center margin>You have not purchased
+          anything yet!</h5>
+      </ion-row>
+      <ion-list *ngIf="inprogressOrders.length > 0">
+        <ng-container *ngFor="let order of inprogressOrders;let i = index">
+          <ion-item class="order_item" no-lines>
+            <ion-label *ngIf="order.delivered && order.accepted">Status: Completed</ion-label>
+            <ion-label *ngIf="order.delivered && !order.accepted">Status: Delivered</ion-label>
+            <ion-label *ngIf="!order.delivered && !order.revisionRequested">Status: In Progress</ion-label>
+            <ion-label *ngIf="order.revisionRequested && !order.delivered">Status: In Revision</ion-label>
+            <ion-label text-right>Date: {{order.date | date : 'MMM dd, yyyy'}}</ion-label>
+          </ion-item>
+          <ion-list no-padding no-margin>
+            <ion-item *ngFor="let image of order.images" padding-left>
+              <ion-row>
+                <ion-col col-3 no-padding no-margin>
+                  <ion-thumbnail style="display:inline-block">
+                    <img [src]="image.url">
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col col-9 no-padding no-margin>
+                  <ion-row>
+                    <p class="image_name">{{image.originalname}}</p>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>
+                      <button full ion-button (click)="download(image.originalname, image.url, order)">
+                        <ion-icon class="padding-right-8px" name="download"></ion-icon>
+                        Save
+                      </button>
+                    </ion-col>
+                    <ion-col>
+                      <button full ion-button (click)="open(image.originalname, image.url, order)">
+                        <ion-icon class="padding-right-8px" name="open"></ion-icon>
+                        Open
+                      </button>
+                    </ion-col>
+                    <ion-col>
+                      <button *ngIf="platform.is('cordova')" full ion-button
+                        (click)="share(image.originalname, image.url)">
+                        <ion-icon class="padding-right-8px" name="share"></ion-icon>
+                        Share
+                      </button>
+                      <ion-fab *ngIf="!platform.is('cordova')" bottom right>
+                        <button ion-fab>
+                          <ion-icon name="share"></ion-icon>
+                        </button>
+                        <ion-fab-list color="primary" side="left">
+                          <button ion-fab color="primary">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                          </button>
+                          <button ion-fab color="secondary">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                          </button>
+                        </ion-fab-list>
+                      </ion-fab>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-list>
+          <ion-grid no-padding padding-left padding-right>
+            <ion-row *ngIf="order.delivered || order.revisionRequested">
+              <ion-col>
+                <button ion-button full (click)="viewOrderDetails(order)">View Delivered Files</button>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="!order.accepted && order.delivered">
+              <ion-col margin-right>
+                <button ion-button full (click)='requestRevision(order)'>
+                  Request Revision
+                </button>
+              </ion-col>
+              <ion-col margin-left>
+                <button ion-button full (click)='acceptOrder(order)'>
+                  Accept Delivery
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ng-container>
+      </ion-list>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'attentionRequired'">
+      <ion-row>
+        <h5 [hidden]="!attentionRequeredOrders || attentionRequeredOrders?.length!=0" text-center margin>No completed
+          orders.</h5>
+      </ion-row>
+      <div>
+        <ion-list *ngIf="attentionRequeredOrders.length">
+          <ng-container *ngFor="let order of attentionRequeredOrders;let i = index">
+            <ion-item class="order_item" no-lines>
+              <ion-label *ngIf="order.delivered && order.accepted">Status: Completed</ion-label>
+              <ion-label *ngIf="order.delivered && !order.accepted">Status: Delivered</ion-label>
+              <ion-label *ngIf="!order.delivered && !order.revisionRequested">Status: In Progress</ion-label>
+              <ion-label *ngIf="order.revisionRequested && !order.delivered">Status: In Revision</ion-label>
+              <ion-label text-right>Date: {{order.date | date : 'MMM dd, yyyy'}}</ion-label>
+            </ion-item>
+            <ion-list no-padding no-margin>
+              <ion-item *ngFor="let image of order.images" padding-left>
+                <ion-row>
+                  <ion-col col-3 no-padding no-margin>
+                    <ion-thumbnail style="display:inline-block">
+                      <img [src]="image.url">
+                    </ion-thumbnail>
+                  </ion-col>
+                  <ion-col col-9 no-padding no-margin>
+                    <ion-row>
+                      <p class="image_name">{{image.originalname}}</p>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        <button full ion-button (click)="download(image.originalname, image.url, order)">
+                          <ion-icon class="padding-right-8px" name="download"></ion-icon>
+                          Save
+                        </button>
+                      </ion-col>
+                      <ion-col>
+                        <button full ion-button (click)="open(image.originalname, image.url, order)">
+                          <ion-icon class="padding-right-8px" name="open"></ion-icon>
+                          Open
+                        </button>
+                      </ion-col>
+                      <ion-col>
+                        <button full ion-button (click)="share(image.originalname, image.url)">
+                          <ion-icon class="padding-right-8px" name="share"></ion-icon>
+                          Share
+                        </button>
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+            <ion-grid no-padding padding-left padding-right padding-bottom>
+              <ion-row *ngIf="order.delivered || order.revisionRequested">
+                <ion-col>
+                  <button ion-button full (click)="viewOrderDetails(order)">View Delivered Files</button>
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="!order.accepted && order.delivered">
+                <ion-col margin-right>
+                  <button ion-button full (click)='requestRevision(order)'>
+                    Request Revision
+                  </button>
+                </ion-col>
+                <ion-col margin-left>
+                  <button ion-button full (click)='acceptOrder(order)'>
+                    Accept Delivery
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+          </ng-container>
+        </ion-list>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'completed'">
+      <ion-row>
+        <h5 [hidden]="!completedOrders || completedOrders?.length!=0" text-center margin>No completed orders.</h5>
+      </ion-row>
+      <div>
+        <ion-list *ngIf="completedOrders.length">
+          <ng-container *ngFor="let order of completedOrders;let i = index">
+            <ion-item class="order_item" no-lines>
+              <ion-label *ngIf="order.delivered && order.accepted">Status: Completed</ion-label>
+              <ion-label *ngIf="order.delivered && !order.accepted">Status: Delivered</ion-label>
+              <ion-label *ngIf="!order.delivered && !order.revisionRequested">Status: In Progress</ion-label>
+              <ion-label *ngIf="order.revisionRequested && !order.delivered">Status: In Revision</ion-label>
+              <ion-label text-right>Date: {{order.date | date : 'MMM dd, yyyy'}}</ion-label>
+            </ion-item>
+            <ion-list no-padding no-margin>
+              <ion-item *ngFor="let image of order.images" padding-left>
+                <ion-row>
+                  <ion-col col-3 no-padding no-margin>
+                    <ion-thumbnail style="display:inline-block">
+                      <img [src]="image.url">
+                    </ion-thumbnail>
+                  </ion-col>
+                  <ion-col col-9 no-padding no-margin>
+                    <ion-row>
+                      <p class="image_name">{{image.originalname}}</p>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        <button full ion-button (click)="download(image.originalname, image.url, order)">
+                          <ion-icon class="padding-right-8px" name="download"></ion-icon>
+                          Save
+                        </button>
+                      </ion-col>
+                      <ion-col>
+                        <button full ion-button (click)="open(image.originalname, image.url, order)">
+                          <ion-icon class="padding-right-8px" name="open"></ion-icon>
+                          Open
+                        </button>
+                      </ion-col>
+                      <ion-col>
+                        <button full ion-button (click)="share(image.originalname, image.url)">
+                          <ion-icon class="padding-right-8px" name="share"></ion-icon>
+                          Share
+                        </button>
+                      </ion-col>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+            <ion-grid no-padding padding-left padding-right padding-bottom>
+              <ion-row *ngIf="order.delivered || order.revisionRequested">
+                <ion-col>
+                  <button ion-button full (click)="viewOrderDetails(order)">View Delivered Files</button>
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="!order.accepted && order.delivered">
+                <ion-col margin-right>
+                  <button ion-button full (click)='requestRevision(order)'>
+                    Request Revision
+                  </button>
+                </ion-col>
+                <ion-col margin-left>
+                  <button ion-button full (click)='acceptOrder(order)'>
+                    Accept Delivery
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+          </ng-container>
+        </ion-list>
+      </div>
+    </ng-container>
+  </ng-container>
+</ion-content>

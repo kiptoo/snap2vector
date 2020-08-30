@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+    </button>
+    <ion-title>
+      <strong>Request Revision</strong> 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-card padding-bottom>
+    <ion-item>
+      <ion-textarea placeholder="Enter instructions for designer..." rows="8" [(ngModel)]="instructions"></ion-textarea>
+    </ion-item>
+    <ion-row padding-left padding-right padding-top>
+      <button ion-button full (click)="presentActionSheet()" >
+        Upload Image
+      </button>
+    </ion-row>
+    <ion-row>
+      <ion-item padding-left style="padding-bottom:0px" *ngIf="image">Update file name</ion-item>
+    </ion-row>
+    <ion-row padding-left padding-right *ngIf="image && buttonClicked">
+      <ion-col col-8>
+        <ion-input  #inpName [(ngModel)]="newName" type="text" placeholder="Type new filename" (click)="focus()"></ion-input>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button full (click)='updateFileName()'>
+          Update
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row padding-left padding-right *ngIf="image && !buttonClicked">
+      <ion-col padding-top col-8>
+        <p padding-left>{{imageName}}</p>
+      </ion-col>
+      <ion-col padding-top col-4>
+        <button ion-button full (click)='editFileName()'>
+          Rename
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  </ion-content>
+<ion-footer>
+  <button ion-button full (click)='sendRequest()' [disabled]="!image || instructions===''">
+        Submit Revision &nbsp;
+        <ion-icon name="send"></ion-icon>
+      </button>
+</ion-footer>

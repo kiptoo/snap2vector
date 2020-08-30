@@ -1,0 +1,59 @@
+page-images-selection {
+  .image-container {
+    min-height: 200px;
+    background-size: cover;
+  }
+
+  .outline-icons {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 0px) {
+    .images {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 420px) {
+    .images {
+      column-count: 3;
+    }
+  }
+
+  @media (min-width: 720px) {
+    .images {
+      column-count: 4;
+    }
+  }
+
+  .one-image {
+    margin: 2px;
+  }
+
+  ion-list {
+    border-radius: 1rem;
+    overflow: hidden;
+
+    ion-item,
+    .item:first-child,
+    .item:last-child {
+      border: none;
+    }
+
+    ion-datetime {
+      padding-left: 0;
+    }
+  }
+}
+
+.selected_image {
+  max-height: 380px;
+  margin: auto;
+  display: block;
+}
+
+.selected_file {
+  max-height: 200px;
+  margin: auto;
+  display: block;
+}

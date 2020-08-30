@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+
+<!--     <ion-buttons  slot="end">
+      <ion-button (click)=message() item-right large >
+        <span ion-text>Text Support</span>
+      </ion-button>
+    </ion-buttons> -->
+        <ion-buttons slot="end">
+  <ion-button id="cart-btn" ion-button slot="icon-only" (click)="openinbox()">
+        <!-- <ion-icon name="inbox"></ion-icon> -->
+        <!-- <ion-icon name="mail-unread"></ion-icon> -->
+        <ion-icon  name="notifications" size="large"></ion-icon>
+        <!-- <ion-icon name="notifications"></ion-icon> -->
+    <ion-badge *ngIf="thebudge" id="cart-badge" size="small" color="danger">{{thebudge}}</ion-badge>
+
+ <!--  <ion-badge *ngIf="badge" id="cart-badge" size="small" [value]="badge | async" color="danger"></ion-badge> -->
+      </ion-button>
+       <ion-button ion-button slot="icon-only" (click)="message()">
+        <!-- <ion-icon name="sms"></ion-icon> -->
+        <!-- <ion-icon name="text"></ion-icon> -->
+        <!-- <ion-icon name="chatboxes" ></ion-icon> -->
+        <ion-label>Text support</ion-label>
+        <!-- <ion-icon name="chatboxes" size="large"></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card  *ngIf="iscoupon" name="coupons" padding>
+    <ion-card-header color="success">Discount!discount</ion-card-header>
+    <ion-card-content *ngFor ="let coupon of coupons">
+       <ion-item>
+         <p>use this coupon <b>{{coupon.id}}</b> to get {{coupon.percent_off}}% off </p>
+        
+     </ion-item>
+  </ion-card-content>
+  </ion-card>
+<!--  <ion-card  name="price"padding tappable (click)="vector()"> -->
+  <ion-card *ngFor ="let p of data" name="price"padding tappable (click)="vector(p.type)">
+    <ion-item>{{p.title}}</ion-item>
+    <ion-thumbnail>
+        <img class="package-bg" [src]="p.image?.url" >
+    <!--   <img class="package-bg" src="assets/img/vector.jpg"> -->
+    </ion-thumbnail>
+    <ion-item>
+      Starting from ${{from(p.prices)}}
+      <ion-button slot="end">SELECT</ion-button>
+    </ion-item>
+  </ion-card>
+<!--   <ion-card padding tappable (click)="digitize()">
+    <ion-item>Snap to Digitize</ion-item>
+    <ion-thumbnail>
+      <img class="package-bg" src="assets/img/digitize.jpg">
+    </ion-thumbnail>
+    <ion-item>
+      Starting from $15
+      <ion-button slot="end">SELECT</ion-button>
+    </ion-item>
+  </ion-card> -->
+</ion-content>

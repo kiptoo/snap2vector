@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "942240372918",
+    "firebase_url": "https://snaptovector.firebaseio.com",
+    "project_id": "snaptovector",
+    "storage_bucket": "snaptovector.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942240372918:android:47c16b582efe4bb2",
+        "android_client_info": {
+          "package_name": "com.msdevelopers.snaptovector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942240372918-f7rt7nm97mdvae608i8qog5a30qkg1vg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgBLcujUHBKjLXoz51JK7CL1Q2BR6WcG8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

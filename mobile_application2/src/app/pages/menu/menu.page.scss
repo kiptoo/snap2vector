@@ -1,0 +1,13 @@
+.active-item {
+  border-left: 8px solid var(--ion-color-primary);
+}
+
+ion-toolbar {
+  height: 100%;
+  --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+}
+.text-white-bold {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>TestDataProvider</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button block icon-start (click)="uploadImageTest()">
+    Test /image
+  </button>
+
+  <div class="white">
+    {{response}}
+    <pre>{{response | json}}</pre>
+  </div>
+
+</ion-content>

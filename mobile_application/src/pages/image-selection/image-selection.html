@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+    </button>
+    <ion-title>
+      <strong>Upload Image</strong>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="!myFile">
+    <img src="assets/img/image-backgorund.jpg" padding style="width:100%">
+  </div>
+
+  <ion-row padding-left padding-right padding-top>
+    <button *ngIf="mobile" ion-button full (click)="presentActionSheet()">
+      Upload Image
+    </button>
+
+    <input type="file" [hidden]="true" multiple="multiple" capture="camera" #fileInput accept="image/*,application/pdf"
+      (change)="browsePhoto($event)">
+    <button *ngIf="!isMobile" ion-button block (click)="fileInput.click()">Upload
+      <!-- <ion-icon name="{{icon}}"> -->
+      <!-- </ion-icon> -->
+    </button>
+
+    <!-- <button *ngIf="!mobile" ion-button full (click)="browsePhoto($event)">
+    Upload Image Brow
+  </button> -->
+
+  </ion-row>
+
+  <div *ngIf="myFile && fileType?.includes('image')">
+    <img class="selected_image" [src]="myFile" padding>
+  </div>
+  <div *ngIf="myFile && !fileType?.includes('image')">
+    <img class="selected_file" src="assets/img/pdf.svg" padding>
+  </div>
+
+  <ion-row padding-left padding-right *ngIf="myFile && buttonClicked">
+    <ion-col col-8>
+      <ion-input #inpName [(ngModel)]="newName" type="text" placeholder="Type new filename" (click)="focus()">
+      </ion-input>
+    </ion-col>
+    <ion-col col-4>
+      <button ion-button full (click)='setNewFileName()'>
+        Update
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row padding-left padding-right *ngIf="image && !buttonClicked">
+    <ion-col padding-top col-8>
+      <p padding-left>{{imageName}}</p>
+    </ion-col>
+    <ion-col padding-top col-4>
+      <button ion-button full (click)='editFileName()'>
+        Rename
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row padding-left padding-right>
+    <ion-col col-4>
+      <button *ngIf='mobile' ion-button full (click)='moveToPrevious()'
+        [disabled]="!(myFile && fileType.includes('image')) || previousFiles.length==0">
+        Undo Crop
+      </button>
+    </ion-col>
+    <ion-col *ngIf='mobile' col-4>
+      <button ion-button full (click)='reset()'
+        [disabled]="!(myFile && fileType.includes('image')) || image===originalImage">
+        Reset
+      </button>
+    </ion-col>
+    <ion-col *ngIf='mobile' col-4>
+      <button ion-button full (click)='cropImage()' [disabled]="!(myFile && fileType.includes('image'))">
+        Crop
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer>
+  <button ion-button full (click)='saveImage()' [disabled]="!myFile">
+    Continue &nbsp;
+    <ion-icon name="send"></ion-icon>
+  </button>
+</ion-footer>

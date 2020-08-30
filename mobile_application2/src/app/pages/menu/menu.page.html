@@ -1,0 +1,66 @@
+<ion-split-pane>
+  <ion-menu side="start" contentId="content" menuId="first">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-grid padding>
+          <ion-row>
+            <ion-text color="light">Welcome</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text class="text-white-bold">
+              {{userData?.name | titlecase}} 
+            </ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text *ngIf="userData" class="text-white-bold">
+              {{userData?.company | titlecase}}
+            </ion-text>
+          </ion-row>
+            <!--    <ion-row>
+            <ion-text *ngIf="userData" class="text-white-bold">
+              {{userData?.phone}}
+            </ion-text>
+          </ion-row> -->
+        </ion-grid>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+          <ion-item [routerLink]="p.url" [id]="p.id" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)">
+            <ion-icon color="primary" slot="start" [name]="p.icon"></ion-icon>
+            <ion-label>
+              {{ p.title }}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false" *ngFor="let m of modals">
+          <ion-item [id]="m.id"  style="cursor: pointer;"(click)="openModal(m.component)">
+            <ion-icon color="primary" slot="start" [name]="m.icon"></ion-icon>
+            <ion-label>
+              {{ m.title }}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-item  id="logout" tappable (click)="logOut()" routerDirection="root">
+          <ion-icon color="primary" name="log-out" slot="start"></ion-icon>
+          Logout
+        </ion-item>
+
+      </ion-list>
+
+    </ion-content>
+  <ion-footer class="bar-stable" padding-left>
+    <ion-item>
+      <p slot="start">Version: 1.2.7</p>
+      <p slot="end">Environment: test</p>
+    </ion-item>
+  </ion-footer>
+  </ion-menu>
+
+  <ion-router-outlet id="content" main></ion-router-outlet>
+
+</ion-split-pane>

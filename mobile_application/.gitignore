@@ -1,0 +1,23 @@
+coverage/
+node_modules/
+api/.git
+tmp/
+temp/
+hooks/
+platforms/
+plugins/
+plugins/android.json
+plugins/ios.json
+www/
+$RECYCLE.BIN/
+
+.sourcemaps/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+syntax: glob
+api/package-lock.json.orig
+api/static/images/designer-uploads/*
+api/static/images/user-uploads/*
+mobile_application/package-lock.json

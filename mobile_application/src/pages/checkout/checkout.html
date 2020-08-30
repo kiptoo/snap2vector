@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Checkout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="checkout-content common-bg">
+  <button (click)="addCreditCard()" *ngIf="!isCardAvaliable" ion-button block color="secondary">Add Credit Card
+  </button>
+  <button [disabled]="!card" (click)="makePayment()" ion-button block color="tetrary">Pay Now <ion-icon
+      class="paynow-icon" name="checkmark-circle"></ion-icon>
+  </button>
+</ion-content>

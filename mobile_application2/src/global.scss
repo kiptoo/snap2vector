@@ -1,0 +1,71 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+// Global CSS
+ion-item {
+  --background: rgba(0, 0, 0, 0);
+  --color: #062f77;
+}
+.image-preview {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  ion-backdrop {
+    visibility: visible !important;
+  }
+
+  .modal-wrapper {
+    background: #000000;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+  }
+}
+
+// Animate CSS
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-down {
+  animation-name: fade-in-down;
+}

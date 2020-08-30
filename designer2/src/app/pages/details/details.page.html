@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Details Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+<!--     <ion-card-header>
+      <ion-card-title>Order # {{order.id}}</ion-card-title>
+      <ion-card-subtitle>
+        <ion-chip *ngIf="!order.delivered">
+          <ion-label color="danger">Urgent</ion-label>
+        </ion-chip>
+        <ion-chip *ngIf="order.delivered">
+          <ion-label color="success">Delivered</ion-label>
+        </ion-chip>
+      </ion-card-subtitle>
+    </ion-card-header> -->
+    <ion-slides pager="true">
+      <ion-slide *ngFor="let image of order?.images">
+        <img [src]="image.url">
+      </ion-slide>
+    </ion-slides>
+    <ion-card-content>
+ <ion-item class="activated">
+   <ion-label color="success">Order # {{order.id}}</ion-label>
+      <ion-chip *ngIf="!order.delivered">
+          <ion-label color="danger">Urgent</ion-label>
+        </ion-chip>
+        <ion-chip *ngIf="order.delivered">
+          <ion-label color="success">Delivered</ion-label>
+        </ion-chip>
+     </ion-item>    
+  <ion-item  class="activated">
+    <ion-icon name="checkmark" slot="start"></ion-icon>
+     <ion-label color="primary">
+                Artwork:
+              </ion-label>
+              <ion-label>
+                {{order?.package?.artwork}}
+              </ion-label>
+  </ion-item>
+  <ion-item  class="activated">
+    <ion-icon name="checkmark" slot="start"></ion-icon>
+ <ion-label color="primary">
+                Scheme:
+              </ion-label>
+              <ion-label>
+                {{order?.package?.scheme}}
+              </ion-label>
+  </ion-item>
+   <ion-item  class="activated">
+    <ion-icon name="checkmark" slot="start"></ion-icon>
+     <ion-label color="primary">
+                File Format:
+              </ion-label>
+              <ion-label>
+                {{order?.package?.fileFormat}}
+              </ion-label>
+  </ion-item>
+        <ion-card *ngIf="sendNotificationSelected">
+        <ion-card-header>Select Message</ion-card-header>
+        <ion-card-content>
+          <ion-item style="width: 100%;height: 100%">
+            <ion-label>Select Message</ion-label>
+            <ion-select class= "myCustomSelect"  [(ngModel)]="selectedNotficationMsg" placeholder="Select Message">
+              <ion-label>Select Message</ion-label>
+              <ion-select-option  style="width: 100%;height: 100%" text-wrap *ngFor="let notification of notifications" [value]="notification">
+                {{notification}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-card-content>
+        <ion-button (click)="sendNotification()" fill="outline" expand="block" color="success">
+          Send
+        </ion-button>
+      </ion-card>
+      <ion-button (click)="rejectRevision()" *ngIf="rejectRevisionBtn" fill="outline" expand="block" color="secondary">
+        Reject Revision
+      </ion-button>
+<!--        <ion-card *ngIf="deliverOrder && filesToUpload">
+       <ion-slides pager="true">
+      <ion-slide *ngFor="let img of filesToUpload">
+        <img [src]="img">
+      </ion-slide>
+    </ion-slides>
+
+      </ion-card> -->
+<!--      <ion-row padding>
+    <input type="file" [hidden]="true" multiple="multiple" capture="camera" #fileInput accept="image/*,application/pdf"
+      (change)="browsePhoto($event)">
+    <ion-button expand="block" (click)="fileInput.click()">Upload
+    </ion-button>
+
+  </ion-row> -->
+        <!-- Icon only -->
+      <ion-segment  color="dark">
+        <!-- <ion-segment-button (click)="deliverOrder()" *ngIf="deliverOrderBtn">
+          <ion-label>Deliver Order</ion-label>
+          <ion-icon name="gift"></ion-icon>
+        </ion-segment-button> -->
+          <ion-segment-button  (click)="fileInput.click()" *ngIf="deliverOrderBtn">
+             <input type="file" [hidden]="true" multiple="multiple" capture="camera" #fileInput 
+      (change)="browsePhoto($event)">
+          <ion-label>Deliver Order</ion-label>
+          <ion-icon name="gift"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button (click)="sendNotificationSelected = true;" *ngIf="sendNotificationBtn" checked>
+          <ion-label>Send Notification</ion-label>
+          <ion-icon name="send"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button   (click)="downloadFile(order?.images)">
+          <ion-label>Download Files</ion-label>
+          <ion-icon name="download"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    <!--   <input #uploadFile hidden type="file" class="form-control" multiple (change)="fileChangeEvent($event)">
+      <ion-button (click)="deliverOrder()" *ngIf="deliverOrderBtn" fill="outline" expand="block" color="success">
+        Deliver Order
+      </ion-button>
+      <ion-button (click)="sendNotificationSelected = true;" *ngIf="sendNotificationBtn" fill="outline" expand="block"
+        color="primary">
+        Send Notification
+      </ion-button>
+      <ion-button (click)="downloadFile(order?.images)" fill="outline" expand="block" color="primary">
+        Download Files
+        <ion-icon name="download"></ion-icon>
+      </ion-button> -->
+
+
+ 
+
+
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

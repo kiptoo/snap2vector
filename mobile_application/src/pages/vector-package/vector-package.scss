@@ -1,0 +1,18 @@
+page-login,
+.login {
+}
+.custom-select{
+    min-width: 100% !important;
+}
+.item-md {
+    padding-left: 0px;
+}
+.bottom-border{
+    border-bottom: 1px solid #dedede;
+}
+.item-md ion-icon[item-left] + .item-inner,
+.item-md ion-icon[item-left] + .item-input,
+.item-md ion-icon[item-start] + .item-inner,
+.item-md ion-icon[item-start] + .item-input {
+  margin-left: 0px;
+}

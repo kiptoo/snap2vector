@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "designer-snaptovector",
+    "public": "dist/designer-panel",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

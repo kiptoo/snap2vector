@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="image-modal transparent" style="max-height:60%">
+    <ion-item class="close-fake" no-line (click)="close()">
+      <ion-icon ios="ios-close" md="md-close"></ion-icon>
+    </ion-item>
+    <img [src]="image.url" class="fullscreen-image transparent" (click)="close()">
+    
+    <ion-item *ngIf="!buttonClicked" padding-left>
+      <p padding-bottom>{{image.originalname}}</p>
+      <button ion-button style="width:49%" ion-start (click)='editFileName()'>
+        <ion-icon ios="ios-create" md="md-create"></ion-icon> 
+        &nbsp;Rename
+      </button>
+      <button ion-button style="width:49%" ion-end (click)='deleteFile()' color="danger">
+          <ion-icon ios="ios-trash" md="md-trash"></ion-icon> 
+          &nbsp;Delete
+        </button>
+    </ion-item>
+
+    <div *ngIf="buttonClicked">
+      <ion-item padding-left>
+        <ion-input [(ngModel)]="newName" type="text" placeholder="Type new filename"></ion-input>   
+      </ion-item>
+      <ion-item padding-left>
+        <button ion-button full (click)="updateFileName()">
+          Update &nbsp;
+          <ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon> 
+        </button>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,103 @@
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+           <ion-button ion-button slot="icon-only"  (click)="clear()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crop Image</ion-title>
+    <ion-buttons slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="reset()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!--  <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+           <ion-button  slot="icon-only"  (click)="clear()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+     
+    </ion-buttons>
+    <ion-title>crop Image</ion-title>
+    <ion-buttons slot="end">
+   <ion-button   (click)="reset()">
+        Reset
+      </ion-button>
+      <ion-button  slot="icon-only"  (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <!-- <div style="width: 100%;height: 70%"> -->
+    <div>
+  
+  <angular-cropper #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="myFile" *ngIf="myFile" style="width: 100%;height: 70%"></angular-cropper>
+</div>
+<!-- 
+ 
+  <ion-row *ngIf="myFile">
+    <ion-col col-4>
+      <button ion-button outline icon-left color="primary" (click)="zoom(true)">
+        <ion-icon name="add"></ion-icon> Zoom
+      </button>
+    </ion-col>
+    <ion-col col-4>
+      <button ion-button outline icon-left color="primary" (click)="zoom(false)">
+        <ion-icon name="remove"></ion-icon> Zoom
+      </button>
+    </ion-col>
+    <ion-col col-4>
+      <button ion-button outline icon-left (click)="rotate()">
+        <ion-icon name="refresh"></ion-icon> 90 deg
+      </button>
+    </ion-col>
+ 
+    <ion-col col-2>
+      <button ion-button clear (click)="scaleX()">
+        Flip X
+      </button>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button clear (click)="scaleY()">
+        Flip Y
+      </button>
+    </ion-col>
+ 
+    <ion-col col-2>
+      <button ion-button clear icon-only (click)="move(0, -10)">
+        <ion-icon name="arrow-round-up"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button clear icon-only (click)="move(0, 10)">
+        <ion-icon name="arrow-round-down"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button clear icon-only (click)="move(-10, 0)">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button clear icon-only (click)="move(10, 0)">
+        <ion-icon name="arrow-round-forward"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row> -->
+ 
+
+ 
+</ion-content>

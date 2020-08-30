@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <strong>SnapToDigitize</strong>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="animated fadeIn" class="form">
+  <ion-item-divider id="poNumber" [color]="digitizeObj.poNumber==='' && isError ? 'danger' : 'primary'">PO Number - file
+    name</ion-item-divider>
+  <ion-item>
+    <ion-input type="text" placeholder="Enter PO number" [(ngModel)]="digitizeObj.poNumber"></ion-input>
+  </ion-item>
+  <ion-item-divider id="size"
+    [color]="(digitizeObj.sizeValue==='' || digitizeObj.size==='') && isError ? 'danger' : 'primary'">Embroidery Size -
+    we keep it proportional
+  </ion-item-divider>
+  <ion-list class="custom-list">
+    <ion-row radio-group [(ngModel)]="digitizeObj.size" (ionChange)="changeDetect($event)">
+      <ion-item>
+        <ion-label>Height</ion-label>
+        <ion-radio value="Height">Height</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Wide</ion-label>
+        <ion-radio value="Wide">Wide</ion-radio>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input type="number" placeholder="in inches" [(ngModel)]="digitizeObj.sizeValue"></ion-input>
+      </ion-item>
+    </ion-row>
+  </ion-list>
+
+  <ion-item-divider id="price" [color]="digitizeObj.price==='' && isError ? 'danger' : 'primary'">Package
+  </ion-item-divider>
+  <ion-list class="custom-list" radio-group [(ngModel)]="digitizeObj.price" (ionChange)="updateLogoTypePrice($event)">
+    <ion-item>
+      <ion-label>$15 - Left chest or Hats up to 4x4 inch</ion-label>
+      <ion-radio value="15">$15 - Left chest or Hats up to 4x4 inch</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>$20 -Size up to - 7x7 inch</ion-label>
+      <ion-radio value="20">$20 - Size up to - 7x7 inch</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>$30 - Full back up to 12x12</ion-label>
+      <ion-radio value="30">$30 - Full back up to 12x12</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>$40 - up to 15 x 15</ion-label>
+      <ion-radio value="40">$40 - up to 15 x 15</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>$50 - up to 20 x 20</ion-label>
+      <ion-radio value="50">$50 - up to 20 x 20</ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-item-group>
+    <ion-item-divider color="primary">Required Earlier - less than 24 hours</ion-item-divider>
+    <ion-item>
+      <ion-label>
+        Rush! Rush! - Add $10
+      </ion-label>
+      <ion-checkbox item-right [disabled]="isRushdisabled==true" [(ngModel)]="digitizeObj.isUrgent"
+        (ionChange)="updatePriceForUrgent()"></ion-checkbox>
+    </ion-item>
+    <ion-item-divider id="fileFormat" [color]="digitizeObj.fileFormat==='' && isError ? 'danger' : 'primary'" tappable
+      (click)="toggleSection()" detail-none [ngClass]="{'section-active': fileListOpen, 'section': !fileListOpen}">
+      <ion-label style="margin:13px 0px">
+        File Format
+      </ion-label>
+      <ion-icon item-right small style="margin:7px" name="add" *ngIf="!fileListOpen" padding-right></ion-icon>
+      <ion-icon item-right small style="margin:7px" name="remove" *ngIf="fileListOpen" padding-right></ion-icon>
+    </ion-item-divider>
+    <ion-list class="custom-list" *ngIf="fileListOpen" no-lines radio-group [(ngModel)]="digitizeObj.fileFormat"
+      (ionChange)="updateLogoTypePrice($event)">
+      <ion-item>
+        <ion-label>EMB 6</ion-label>
+        <ion-radio value="EMB6">EMB 6</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>EMB 9</ion-label>
+        <ion-radio value="EMB9">EMB 9</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>DST</ion-label>
+        <ion-radio value="DST">DST</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>CND</ion-label>
+        <ion-radio value="CND">CND</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>EXP</ion-label>
+        <ion-radio value="EXP">EXP</ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <ion-item-divider id="garmentTypes"
+      [color]="digitizeObj.garmentTypes.length === 0 && isError ? 'danger' : 'primary'">Garment Type</ion-item-divider>
+    <ion-item-group>
+      <ion-item *ngFor="let type of garmentTypes">
+        <ion-label>
+          {{type.name}}
+        </ion-label>
+        <ion-checkbox item-right [(ngModel)]="type.checked" (ionChange)="garmentChangeEvent()"></ion-checkbox>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-divider id="trims" [color]="digitizeObj.trims.length===0 && isError ? 'danger' : 'primary'">Trims
+    </ion-item-divider>
+    <ion-item-group>
+      <ion-item *ngFor="let trim of trims">
+        <ion-label>
+          {{trim.name}}
+        </ion-label>
+        <ion-checkbox item-right [(ngModel)]="trim.checked" (ionChange)="trimsChangeEvent()"></ion-checkbox>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-divider color="primary">Special Instructions</ion-item-divider>
+    <ion-item>
+      <ion-textarea placeholder="Enter message for designer..." rows="5" [(ngModel)]="digitizeObj.instructions">
+      </ion-textarea>
+    </ion-item>
+  </ion-item-group>
+</ion-content>
+<ion-footer>
+  <button ion-button full color="Dark" (click)="placeOrder()">
+    ${{ digitizeObj?.amount | number : '1.2-2' }} - Continue
+  </button>
+</ion-footer>

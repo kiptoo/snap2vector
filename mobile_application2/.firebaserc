@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "snaptovector",
+    "snaptovector": "snaptovectorv2"
+  }
+}

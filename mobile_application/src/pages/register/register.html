@@ -1,0 +1,88 @@
+<!-- -->
+<ion-content class="auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding text-center>
+      <div class="logo"></div>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form" [formGroup]="registerForm" (ngSubmit)="register()">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon ios="ios-person" md="md-person" item-start class="text-primary"></ion-icon>
+          Full Name
+        </ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="call" class="text-primary" item-start></ion-icon>
+          Phone Number
+        </ion-label>
+        <ion-input type="text" maxlength="10" formControlName="phone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="briefcase" class="text-primary" item-start></ion-icon>
+          Company Name
+        </ion-label>
+        <ion-input type="text" formControlName="company"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon ios="ios-mail" md="md-mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon ios="ios-lock" md="md-lock" item-start class="text-primary"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+    </form>
+
+    <div margin-top>
+      <button ion-button block color="dark" tappable (click)="register()">
+        SIGN UP
+      </button>
+
+
+      <button margin-top ion-button icon-only block class="btn-gplus" tappable (click)="googleLogin()">
+        Google Login
+        <!-- <ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon> -->
+      </button>
+
+      <!-- <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <button ion-button icon-only block class="btn-facebook" tappable (click)="fbLogin()">
+              <ion-icon  ios="logo-facebook" md="logo-facebook"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-6>
+            <button ion-button icon-only block class="btn-gplus" tappable (click)="googleLogin()">
+              <ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid> -->
+    </div>
+
+    <!-- Other links -->
+    <div text-center margin-top>
+      <span ion-text color="primary" tappable (click)="login()" style="font-size:1.3rem">I have an account</span>
+    </div>
+
+  </div>
+</ion-content>

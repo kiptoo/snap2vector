@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>New Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+     <ng-container *ngFor="let order of displayedOrders">
+         <ion-card background="primary">
+
+        <ion-card-header>
+         <ion-card-title>
+           <ion-label color="primary">Order # {{order.id}}</ion-label>
+          <!-- <ion-card-subtitle> -->
+            <ion-chip *ngIf="!order.delivered">
+              <ion-label color="danger">Urgent</ion-label>
+            </ion-chip>
+            <ion-chip *ngIf="order.delivered">
+              <ion-label color="success">Delivered</ion-label>
+            </ion-chip>
+           
+<ion-label color="primary" style="text-align: right;position: absolute;right: 10px;font-style: normal; " padding-right>Date: {{order.date | date : 'MMM dd, yyyy'}}</ion-label>
+         
+
+             
+      
+          
+                            </ion-card-title>
+ <!--    <ion-card-subtitle>
+<ion-label color="primary" style="text-align: right;position: absolute;right: 10px;font-style: normal; " padding-right>Date: {{order.date | date : 'MMM dd, yyyy'}}</ion-label>
+       </ion-card-subtitle>   -->
+
+        </ion-card-header>
+        <ion-card-content *ngFor="let image of order?.images">
+             <ion-item  padding-left>
+             <!--  <img  [src]="image.url" /> -->
+             <ion-thumbnail style="display:inline-block">
+        <img  [src]="image.url" />
+         </ion-thumbnail>
+          <!--  <ion-row >
+                      <p style="text-align: right;position: absolute;right: 0px" class="image_name" padding>File Name:{{image.filename}}</p>
+                    </ion-row> -->
+                   
+        
+  <ion-grid>
+  
+           <ion-row>
+          <ion-col>
+            <div>
+               <ion-label color="primary">
+                Artwork:
+              </ion-label>
+              <ion-label>
+                {{order?.package?.artwork}}
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+               <ion-label color="primary">
+                Scheme:
+              </ion-label>
+              <ion-label>
+                {{order?.package?.scheme}}
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-label color="primary">
+                File Format:
+              </ion-label>
+              <ion-label>
+                {{order?.package?.fileFormat}}
+              </ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+</ion-item>
+<ion-item  *ngIf="order.package.instructions">
+<ion-row >
+     <ion-label color="primary">
+                Instructions:
+              </ion-label>
+              <ion-label>
+                {{order?.package?.instructions}}
+              </ion-label>             
+                    </ion-row>
+
+</ion-item>
+         <!-- Icon only -->
+      <ion-segment  color="dark">
+  <!--       <ion-segment-button (click)="download(image.filename, image.url, order)">
+          <ion-label>Save</ion-label>
+          <ion-icon name="download"></ion-icon>
+        </ion-segment-button> -->
+        <ion-segment-button (click)="goToDetails(order)" checked>
+          <ion-label>Open</ion-label>
+          <ion-icon name="open"></ion-icon>
+        </ion-segment-button>
+     <!--    <ion-segment-button  *ngIf="isCordova"  (click)="share(image.filename, image.url)">
+          <ion-label>Share</ion-label>
+          <ion-icon name="share"></ion-icon>
+        </ion-segment-button> -->
+      </ion-segment>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

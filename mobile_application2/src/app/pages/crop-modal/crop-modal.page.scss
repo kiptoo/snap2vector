@@ -1,0 +1,26 @@
+
+.angular-cropper-wrapper{
+    width: 100%;
+  height: 70%;
+
+}
+.img-container {
+  /* Never limit the container height here */
+  max-width: 100%;
+}
+
+.img-container img {
+  /* This is important */
+  width: 100%;
+  height: 50%;
+}
+
+.cropper-container{
+ width: 100%;
+  height: 50%;
+}
+
+/*.cropper-bg{
+ width: 100%;
+  height: 50%;
+}*/

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon ios="ios-menu" md="md-menu"></ion-icon>
+    </button>
+    <ion-title center>
+      <strong>Home</strong>
+    </ion-title>
+
+    <ion-buttons right>
+      <button tappable ion-button (click)=message() item-right large class="text-support-style">
+        <span ion-text>Text Support</span>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-card padding tappable (click)="vector()">
+    <ion-item>Snap to Vector</ion-item>
+    <ion-thumbnail>
+      <img class="package-bg" src="assets/img/vector.jpg">
+    </ion-thumbnail>
+    <ion-item>
+      Starting from $15
+      <button ion-button right item-right padding-right padding-left>SELECT</button>
+    </ion-item>
+  </ion-card>
+  <ion-card padding tappable (click)="digitize()">
+    <ion-item>Snap to Digitize</ion-item>
+    <ion-thumbnail>
+      <img class="package-bg" src="assets/img/digitize.jpg">
+    </ion-thumbnail>
+    <ion-item>
+      Starting from $15
+      <button ion-button right item-right padding-right padding-left>SELECT</button>
+    </ion-item>
+  </ion-card>
+</ion-content>

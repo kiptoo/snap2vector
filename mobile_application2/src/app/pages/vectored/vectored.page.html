@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Delivered Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-margin>
+    <ion-item class="vector-item" *ngFor="let vector of vectorizedImages" padding-left>
+      <ion-row>
+        <ion-col col-3>
+          <ion-thumbnail style="display:inline-block">
+            <img [src]="vector.url" onError="this.src='assets/img/image-backgorund.jpg'">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col col-9>
+          <p class="image-name">{{vector.originalname}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col margin-right>
+            <ion-button expand="full" (click)='download(vector.originalname, vector.url)'>
+              Download
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button expand="full" (click)='open(vector.originalname, vector.url)'>
+              Open
+            </ion-button>
+          </ion-col>
+          <ion-col margin-left>
+            <ion-button *ngIf="isCordova" expand="full" (click)='share(vector.originalname, vector.url)'>
+              Share
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,3153 @@
+[{
+   "@MISMOVersionID": "2.3.1",
+   "RESPONDING_PARTY": {
+      "@_Name": "MCL BETA",
+      "@_StreetAddress": "1600 SUNFLOWER AVE",
+      "@_City": "COSTA MESA",
+      "@_State": "CA",
+      "@_PostalCode": "92626",
+      "CONTACT_DETAIL": [
+         {
+            "@_RoleType": "Work",
+            "@_Type": "Phone",
+            "@_Value": "7147086950"
+         },
+         {
+            "@_RoleType": "Work",
+            "@_Type": "Fax",
+            "@_Value": "7147086956"
+         }
+      ]
+   },
+   "RESPOND_TO_PARTY": {
+      "@_Name": "Customer in Testing",
+      "@_StreetAddress": "1600 SUNFLOWER AVE",
+      "@_City": "COSTA MESA",
+      "@_State": "CA",
+      "@_PostalCode": "92626"
+   },
+   "RESPONSE": {
+      "@ResponseDateTime": "2016-06-23T11:52:30-07",
+      "KEY": [
+         {
+            "@_Name": "ExperianFairIsaac_MinimumValue",
+            "@_Value": "320"
+         },
+         {
+            "@_Name": "ExperianFairIsaac_MaximumValue",
+            "@_Value": "844"
+         },
+         {
+            "@_Name": "CreditScoreRankPercent_CreditResponse1_CreditScore13",
+            "@_Value": "57"
+         },
+         {
+            "@_Name": "FICORiskScoreClassic98_MinimumValue",
+            "@_Value": "336"
+         },
+         {
+            "@_Name": "FICORiskScoreClassic98_MaximumValue",
+            "@_Value": "843"
+         },
+         {
+            "@_Name": "CreditScoreRankPercent_CreditResponse1_CreditScore102",
+            "@_Value": "56"
+         },
+         {
+            "@_Name": "EquifaxBeacon5.0_MinimumValue",
+            "@_Value": "334"
+         },
+         {
+            "@_Name": "EquifaxBeacon5.0_MaximumValue",
+            "@_Value": "818"
+         },
+         {
+            "@_Name": "CreditScoreRankPercent_CreditResponse1_CreditScore148",
+            "@_Value": "57"
+         }
+      ],
+      "RESPONSE_DATA": {
+         "CREDIT_RESPONSE": {
+            "@MISMOVersionID": "2.3.1",
+            "@CreditResponseID": "CreditResponse1",
+            "@CreditReportIdentifier": "198496",
+            "@CreditReportFirstIssuedDate": "2016-06-23",
+            "@CreditReportLastUpdatedDate": "2016-06-23",
+            "@CreditReportMergeType": "Blend",
+            "@CreditReportType": "Merge",
+            "@CreditRatingCodeType": "Experian",
+            "_DATA_INFORMATION": [
+               {
+                  "@_Name": "MORTGAGECREDITLINK",
+                  "@_Number": ""
+               },
+               {
+                  "@_Name": "MCLMismoFramework",
+                  "@_Number": "2.1"
+               }
+            ],
+            "CREDIT_BUREAU": {
+               "@_Name": "MCL BETA",
+               "@_StreetAddress": "1600 SUNFLOWER AVE",
+               "@_City": "COSTA MESA",
+               "@_State": "CA",
+               "@_PostalCode": "92626",
+               "CONTACT_DETAIL": [
+                  {
+                     "@_RoleType": "Work",
+                     "@_Type": "Phone",
+                     "@_Value": "7147086950"
+                  },
+                  {
+                     "@_RoleType": "Work",
+                     "@_Type": "Fax",
+                     "@_Value": "7147086956"
+                  }
+               ]
+            },
+            "CREDIT_REPOSITORY_INCLUDED": {
+               "@_EquifaxIndicator": "Y",
+               "@_ExperianIndicator": "Y",
+               "@_TransUnionIndicator": "Y"
+            },
+            "REQUESTING_PARTY": {
+               "@InternalAccountIdentifier": "#001",
+               "@LenderCaseIdentifier": "API DEMO",
+               "@_Name": "Customer in Testing",
+               "@_StreetAddress": "1600 SUNFLOWER AVE",
+               "@_City": "COSTA MESA",
+               "@_State": "CA",
+               "@_PostalCode": "92626"
+            },
+            "BORROWER": {
+               "@BorrowerID": "PC",
+               "@_BirthDate": "1980-05-27",
+               "@_FirstName": "MARISOL",
+               "@_LastName": "TESTCASE",
+               "@_PrintPositionType": "Borrower",
+               "@_SSN": "000000001",
+               "@_UnparsedName": "MARISOL TESTCASE",
+               "@MaritalStatusType": "Unknown",
+               "_RESIDENCE": {
+                  "@_City": "ANTHILL",
+                  "@_State": "MO",
+                  "@_PostalCode": "65488",
+                  "@_StreetAddress": "220 LOCUST AVE",
+                  "@BorrowerResidencyType": "Current"
+               }
+            },
+            "CREDIT_LIABILITY": [
+               {
+                  "@CreditLiabilityID": "CreditLiability49",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000006",
+                  "@_AccountOpenedDate": "2015-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-05",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Installment",
+                  "@_HighCreditAmount": "31206",
+                  "@_LastActivityDate": "2015-11",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "533",
+                  "@_MonthsRemainingCount": "61",
+                  "@_MonthsReviewedCount": "9",
+                  "@_PastDueAmount": "0",
+                  "@_TermsDescription": "069 months at $533 per month",
+                  "@_TermsMonthsCount": "069",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "28626",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "Automobile",
+                  "_CREDITOR": {
+                     "@_Name": "USAA FEDERAL SAVINGS B"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCC",
+                     "@_StartDate": "2016-04"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability33",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000002",
+                  "@_AccountOpenedDate": "2015-11",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "4000",
+                  "@_HighCreditAmount": "4000",
+                  "@_LastActivityDate": "2016-06",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "10",
+                  "@_MonthsReviewedCount": "7",
+                  "@_PastDueAmount": "0",
+                  "@_TermsDescription": "",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "228",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "CHASE"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability39",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000001",
+                  "@_AccountOpenedDate": "2016-06",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "7500",
+                  "@_HighCreditAmount": "7500",
+                  "@_LastActivityDate": "2016-06",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "1",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "MBNA AMERICA"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability41",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000004",
+                  "@_AccountOpenedDate": "2016-06",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "2300",
+                  "@_HighCreditAmount": "2300",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "1",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "CITI"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability43",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000011",
+                  "@_AccountOpenedDate": "2016-01",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "1000",
+                  "@_HighCreditAmount": "1000",
+                  "@_LastActivityDate": "2016-01",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "6",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Clothing",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "WFNNB/BEALLS"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability23",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_AccountClosedDate": "2013-07",
+                  "@_AccountIdentifier": "ACCT000013",
+                  "@_AccountOpenedDate": "2012-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2013-04",
+                  "@_AccountReportedDate": "2013-07",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "900",
+                  "@_HighCreditAmount": "900",
+                  "@_LastActivityDate": "2013-04",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "09",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "DepartmentAndMailOrder",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "NBGL-MCRAES"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCXXXXXCC",
+                     "@_StartDate": "2013-06"
+                  },
+                  "CREDIT_COMMENT": [
+                     {
+                        "@_SourceType": "TransUnion",
+                        "@_Code": "PAL",
+                        "_Text": "PURCHASED BY ANOTHER LENDER"
+                     },
+                     {
+                        "@_SourceType": "CreditBureau",
+                        "@_Type": "BureauRemarks",
+                        "_Text": "PURCHASED BY ANOTHER LENDER"
+                     }
+                  ],
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability47",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000005",
+                  "@_AccountOpenedDate": "2015-11",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-05",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Installment",
+                  "@_LastActivityDate": "2016-05",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthsReviewedCount": "1",
+                  "@_PastDueAmount": "0",
+                  "@_TermsMonthsCount": "001",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "@CreditLoanType": "Other",
+                  "@CreditLoanTypeOtherDescription": "UtilityCompany",
+                  "_CREDITOR": {
+                     "@_Name": "GTE SOUTHWEST INC"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "CREDIT_COMMENT": {
+                     "@_SourceType": "CreditBureau",
+                     "@_Type": "BureauRemarks",
+                     "_Text": "UTILITY COMPANY"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability45",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000007",
+                  "@_AccountOpenedDate": "2013-03",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "500",
+                  "@_HighCreditAmount": "500",
+                  "@_LastActivityDate": "2014-11",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "39",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "DepartmentAndMailOrder",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "GEMB/JCP"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability29",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2015-10",
+                  "@_AccountIdentifier": "ACCT000012",
+                  "@_AccountOpenedDate": "2015-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2015-10",
+                  "@_AccountReportedDate": "2015-10",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Installment",
+                  "@_HighCreditAmount": "30973",
+                  "@_LastActivityDate": "2015-10",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsRemainingCount": "71",
+                  "@_MonthsReviewedCount": "2",
+                  "@_PastDueAmount": "0",
+                  "@_TermsMonthsCount": "072",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Finance",
+                  "@CreditLoanType": "Automobile",
+                  "_CREDITOR": {
+                     "@_Name": "TOYOTA MOTOR CREDIT"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "C",
+                     "@_StartDate": "2015-09"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability27",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2016-06",
+                  "@_AccountIdentifier": "ACCT000003",
+                  "@_AccountOpenedDate": "2013-07",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2015-06",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "7500",
+                  "@_HighCreditAmount": "7500",
+                  "@_LastActivityDate": "2015-06",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "35",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "DISCOVER FIN SVS LLC"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_COMMENT": [
+                     {
+                        "@_SourceType": "Experian",
+                        "@_Code": "19",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     },
+                     {
+                        "@_SourceType": "CreditBureau",
+                        "@_Type": "BureauRemarks",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     }
+                  ],
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability25",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2016-05",
+                  "@_AccountIdentifier": "ACCT000009",
+                  "@_AccountOpenedDate": "2011-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2016-05",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "1800",
+                  "@_HighCreditAmount": "1800",
+                  "@_LastActivityDate": "2016-05",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "57",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "CITI"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCXCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_COMMENT": [
+                     {
+                        "@_SourceType": "Experian",
+                        "@_Code": "19",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     },
+                     {
+                        "@_SourceType": "CreditBureau",
+                        "@_Type": "BureauRemarks",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     }
+                  ],
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability37",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000010",
+                  "@_AccountOpenedDate": "2012-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "900",
+                  "@_HighCreditAmount": "900",
+                  "@_LastActivityDate": "2016-02",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "35",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Finance",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "HSBC/MCRAE"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability35",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000008",
+                  "@_AccountOpenedDate": "2015-04",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "1200",
+                  "@_HighCreditAmount": "1200",
+                  "@_LastActivityDate": "2015-11",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "15",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Finance",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "GEMB/OLD NAVY"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability31",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2014-12",
+                  "@_AccountIdentifier": "ACCT000014",
+                  "@_AccountOpenedDate": "2012-06",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2012-10",
+                  "@_AccountReportedDate": "2014-12",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "200",
+                  "@_HighCreditAmount": "200",
+                  "@_LastActivityDate": "2012-10",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "31",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "DepartmentAndMailOrder",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "CATO CORPORATION"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "XXXXXXXXXXXXXXXXXXXXXXXXXCCC",
+                     "@_StartDate": "2014-11"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               }
+            ],
+            "CREDIT_INQUIRY": [
+               {
+                  "@CreditInquiryID": "CreditInquiry51",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_Name": "FISERV CREDSTAR",
+                  "@_Date": "2016-06-18",
+                  "@CreditBusinessType": "Finance",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry53",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_Name": "MBNA",
+                  "@_Date": "2016-06-12",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Experian",
+                     "@_SubscriberCode": "1217350"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry55",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_Name": "WFNNB/BEALLS",
+                  "@_Date": "2015-12-29",
+                  "@CreditBusinessType": "Clothing",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Experian",
+                     "@_SubscriberCode": "1350890"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry94",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "CHASE CREDIT",
+                  "@_Date": "2016-06-18",
+                  "@CreditBusinessType": "RealEstateAndPublicAccommodation",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "R 06482329"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry96",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "CITI",
+                  "@_Date": "2016-05-13",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "B 06519225"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry98",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "FIRST USA NA",
+                  "@_Date": "2015-11-21",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "B 00006675"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry100",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "CARLOCK TOYO",
+                  "@_Date": "2015-09-03",
+                  "@CreditBusinessType": "Automotive",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "A 00210492"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry132",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "ANDELER",
+                  "@_Date": "2015-10-31",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "621UE09049"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry134",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "USAA",
+                  "@_Date": "2015-09-04",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "650BB12297"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry136",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "CTUPELO",
+                  "@_Date": "2015-09-03",
+                  "@CreditBusinessType": "Automotive",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "234AN25095"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry138",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "TOYOTA CRE",
+                  "@_Date": "2015-09-03",
+                  "@CreditBusinessType": "Finance",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "774FF39515"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry140",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "CINGULR-MS",
+                  "@_Date": "2015-07-18",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "433UT00364"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry142",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "CINGULR-MS",
+                  "@_Date": "2015-07-14",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "433UT00364"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry144",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "FED GOVT",
+                  "@_Date": "2015-05-23",
+                  "@CreditBusinessType": "Government",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "497VF00148"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry146",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "GEMB/OLDNY",
+                  "@_Date": "2015-04-20",
+                  "@CreditBusinessType": "Finance",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "404FF09123"
+                  }
+               }
+            ],
+            "CREDIT_FILE": [
+               {
+                  "@CreditFileID": "CreditFile1",
+                  "@BorrowerID": "PC",
+                  "@_ResultStatusType": "FileReturned",
+                  "@CreditRepositorySourceType": "Experian",
+                  "_BORROWER": {
+                     "@_FirstName": "MARISOL",
+                     "@_LastName": "TESTCASE",
+                     "@_SSN": "000000001",
+                     "@_UnparsedName": "MARISOL TESTCASE",
+                     "_ALIAS": [
+                        {
+                           "@_FirstName": "LEMUS",
+                           "@_LastName": "TESTCASE",
+                           "@_UnparsedName": "LEMUS TESTCASE"
+                        },
+                        {
+                           "@_FirstName": "TESTCASE",
+                           "@_LastName": "MARISOL",
+                           "@_UnparsedName": "TESTCASE MARISOL"
+                        }
+                     ],
+                     "_RESIDENCE": [
+                        {
+                           "@_StreetAddress": "220 LOCUST AVE, ANTHILL, MO 65488-0001",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "654880001",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "220",
+                              "@_StreetName": "LOCUST",
+                              "@_StreetSuffix": "AVE"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMACHA RD, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "7144 S",
+                              "@_StreetName": "JAMACHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMOCHA RD, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "7144 S",
+                              "@_StreetName": "JAMOCHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        }
+                     ],
+                     "EMPLOYER": {
+                        "@_Name": "US AIR FORCE",
+                        "@CurrentEmploymentStartDate": "2015-10"
+                     }
+                  }
+               },
+               {
+                  "@CreditFileID": "CreditFile2",
+                  "@BorrowerID": "PC",
+                  "@_ResultStatusType": "FileReturned",
+                  "@CreditRepositorySourceType": "TransUnion",
+                  "@_InfileDate": "2001-06-01",
+                  "_ALERT_MESSAGE": {
+                     "@_AdverseIndicator": "Y",
+                     "@_CategoryType": "FACTARiskScoreValue",
+                     "_Text": "FACTA: Risk Score Value - The Risk Score Value was adversely affected by credit inquiries present in the credit file."
+                  },
+                  "_BORROWER": {
+                     "@_FirstName": "MARISOL",
+                     "@_LastName": "TESTCASE",
+                     "@_MiddleName": "L",
+                     "@_SSN": "000000001",
+                     "@_UnparsedName": "MARISOL L TESTCASE",
+                     "@_AgeYears": "36",
+                     "@_BirthDate": "1980-05-27",
+                     "_ALIAS": {
+                        "@_UnparsedName": "TESTCASE,LEMUS,M"
+                     },
+                     "_RESIDENCE": [
+                        {
+                           "@_StreetAddress": "220 LOCUST AV, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "@BorrowerResidencyType": "Current",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "220",
+                              "@_StreetName": "LOCUST",
+                              "@_StreetSuffix": "AV"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMACHA RD, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "@BorrowerResidencyType": "Prior",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_DirectionPrefix": "S",
+                              "@_HouseNumber": "7144",
+                              "@_StreetName": "JAMACHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        }
+                     ],
+                     "EMPLOYER": {
+                        "@_Name": "FLETCHER MOTORCARS",
+                        "@EmploymentPositionDescription": "CAR SALES"
+                     }
+                  }
+               },
+               {
+                  "@CreditFileID": "CreditFile3",
+                  "@BorrowerID": "PC",
+                  "@_ResultStatusType": "FileReturned",
+                  "@CreditRepositorySourceType": "Equifax",
+                  "@_InfileDate": "2001-06-30",
+                  "_BORROWER": {
+                     "@_AgeYears": "36",
+                     "@_BirthDate": "1980-05-27",
+                     "@_FirstName": "MARISOL",
+                     "@_LastName": "TESTCASE",
+                     "@_MiddleName": "LEMUS",
+                     "@_SSN": "000000001",
+                     "@_UnparsedName": "MARISOL LEMUS TESTCASE",
+                     "_ALIAS": {
+                        "@_FirstName": "LEMUS",
+                        "@_LastName": "TESTCASE",
+                        "@_UnparsedName": "LEMUS TESTCASE"
+                     },
+                     "_RESIDENCE": [
+                        {
+                           "@_StreetAddress": "220 LOCUST AVE, ANTHILL, MO 65488-0001",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "654880001",
+                           "@BorrowerResidencyType": "Current",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "220",
+                              "@_StreetName": "LOCUST",
+                              "@_StreetSuffix": "AVE"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMACHA RD, ANTHILL, MO 65488-0001",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "654880001",
+                           "@BorrowerResidencyType": "Prior",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "7144 S",
+                              "@_StreetName": "JAMACHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        }
+                     ]
+                  }
+               }
+            ],
+            "CREDIT_SCORE": [
+               {
+                  "@CreditScoreID": "CreditScore13",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@CreditReportIdentifier": "198496",
+                  "@CreditRepositorySourceType": "Experian",
+                  "@_Date": "2016-06-23",
+                  "@_FACTAInquiriesIndicator": "N",
+                  "@_ModelNameType": "ExperianFairIsaac",
+                  "@_Value": "745",
+                  "_FACTOR": [
+                     {
+                        "@_Code": "14",
+                        "@_Text": "LENGTH OF TIME ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "08",
+                        "@_Text": "TOO MANY INQUIRIES LAST 12 MONTHS"
+                     },
+                     {
+                        "@_Code": "09",
+                        "@_Text": "TOO MANY ACCOUNTS RECENTLY OPENED"
+                     }
+                  ]
+               },
+               {
+                  "@CreditScoreID": "CreditScore102",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@CreditReportIdentifier": "198496",
+                  "@CreditRepositorySourceType": "TransUnion",
+                  "@_Date": "2016-06-23",
+                  "@_FACTAInquiriesIndicator": "Y",
+                  "@_ModelNameType": "FICORiskScoreClassic98",
+                  "@_Value": "741",
+                  "_FACTOR": [
+                     {
+                        "@_Code": "014",
+                        "@_Text": "LENGTH OF TIME ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "012",
+                        "@_Text": "LENGTH OF TIME REVOLVING ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "008",
+                        "@_Text": "TOO MANY INQUIRIES LAST 12 MONTHS"
+                     },
+                     {
+                        "@_Code": "030",
+                        "@_Text": "TIME SINCE MOST RECENT ACCOUNT OPENING IS TOO SHORT"
+                     },
+                     {
+                        "@_Code": "FA",
+                        "@_Text": "INQUIRIES IMPACTED THE CREDIT SCORE"
+                     }
+                  ]
+               },
+               {
+                  "@CreditScoreID": "CreditScore148",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@CreditReportIdentifier": "198496",
+                  "@CreditRepositorySourceType": "Equifax",
+                  "@_Date": "2016-06-23",
+                  "@_FACTAInquiriesIndicator": "N",
+                  "@_ModelNameType": "EquifaxBeacon5.0",
+                  "@_Value": "743",
+                  "_FACTOR": [
+                     {
+                        "@_Code": "00030",
+                        "@_Text": "TIME SINCE MOST RECENT ACCOUNT OPENING IS TOO SHORT"
+                     },
+                     {
+                        "@_Code": "00014",
+                        "@_Text": "LENGTH OF TIME ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "00008",
+                        "@_Text": "TOO MANY INQUIRIES LAST 12 MONTHS"
+                     },
+                     {
+                        "@_Code": "00012",
+                        "@_Text": "LENGTH OF TIME REVOLVING ACCOUNTS HAVE BEEN ESTABLISHED"
+                     }
+                  ]
+               }
+            ],
+            "CREDIT_CONSUMER_REFERRAL": [
+               {
+                  "@_Name": "EQUIFAX",
+                  "@_StreetAddress": "PO BOX 740241",
+                  "@_City": "ATLANTA",
+                  "@_State": "GA",
+                  "@_PostalCode": "30374",
+                  "CONTACT_DETAIL": {
+                     "CONTACT_POINT": {
+                        "@_RoleType": "Work",
+                        "@_Type": "Phone",
+                        "@_Value": "8006851111"
+                     }
+                  }
+               },
+               {
+                  "@_Name": "EXPERIAN",
+                  "@_StreetAddress": "PO BOX 4500",
+                  "@_City": "ALLEN",
+                  "@_State": "TX",
+                  "@_PostalCode": "75013",
+                  "CONTACT_DETAIL": {
+                     "CONTACT_POINT": {
+                        "@_RoleType": "Work",
+                        "@_Type": "Phone",
+                        "@_Value": "8883973742"
+                     }
+                  }
+               },
+               {
+                  "@_Name": "TRANSUNION",
+                  "@_StreetAddress": "PO BOX 2000",
+                  "@_City": "CHESTER",
+                  "@_State": "PA",
+                  "@_PostalCode": "19022",
+                  "CONTACT_DETAIL": {
+                     "CONTACT_POINT": {
+                        "@_RoleType": "Work",
+                        "@_Type": "Phone",
+                        "@_Value": "8008884213"
+                     }
+                  }
+               }
+            ],
+            "CREDIT_SUMMARY": [
+               {
+                  "@BorrowerID": "PC",
+                  "@_Name": "MLTradeSummary",
+                  "_DATA_SET": [
+                     {
+                        "@_Name": "LiabilityOldestDate",
+                        "@_Value": "2011-09"
+                     },
+                     {
+                        "@_Name": "LiabilityOldestCreditorName",
+                        "@_Value": "CITI"
+                     },
+                     {
+                        "@_Name": "MortgageCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgageBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgagePayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgagePastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgageHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentCount",
+                        "@_Value": "3"
+                     },
+                     {
+                        "@_Name": "InstallmentBalance",
+                        "@_Value": "28626"
+                     },
+                     {
+                        "@_Name": "InstallmentPayment",
+                        "@_Value": "533"
+                     },
+                     {
+                        "@_Name": "InstallmentPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentHighCredit",
+                        "@_Value": "31206"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherCount",
+                        "@_Value": "1"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "AutoCount",
+                        "@_Value": "2"
+                     },
+                     {
+                        "@_Name": "AutoBalance",
+                        "@_Value": "28626"
+                     },
+                     {
+                        "@_Name": "AutoPayment",
+                        "@_Value": "533"
+                     },
+                     {
+                        "@_Name": "AutoPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "AutoHighCredit",
+                        "@_Value": "31206"
+                     },
+                     {
+                        "@_Name": "EducationCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "RevolvingCount",
+                        "@_Value": "11"
+                     },
+                     {
+                        "@_Name": "RevolvingBalance",
+                        "@_Value": "228"
+                     },
+                     {
+                        "@_Name": "RevolvingPayment",
+                        "@_Value": "10"
+                     },
+                     {
+                        "@_Name": "RevolvingPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "RevolvingHighCredit",
+                        "@_Value": "17400"
+                     },
+                     {
+                        "@_Name": "UnknownCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityCount",
+                        "@_Value": "14"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityBalance",
+                        "@_Value": "28854"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityPayment",
+                        "@_Value": "543"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityHighCredit",
+                        "@_Value": "48606"
+                     }
+                  ]
+               },
+               {
+                  "@BorrowerID": "PC",
+                  "@_Name": "MLDerogatorySummary",
+                  "_DATA_SET": [
+                     {
+                        "@_Name": "TotalSecuredLoanBalance",
+                        "@_Value": "28626"
+                     },
+                     {
+                        "@_Name": "TotalUnsecuredLoanBalance",
+                        "@_Value": "228"
+                     },
+                     {
+                        "@_Name": "TotalHighCredit",
+                        "@_Value": "48606"
+                     },
+                     {
+                        "@_Name": "DebtHighCredit",
+                        "@_Value": "59%"
+                     },
+                     {
+                        "@_Name": "Day30",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "Day60",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "Day90",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "DerogOtherCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilitySatisfactoryCount",
+                        "@_Value": "14"
+                     },
+                     {
+                        "@_Name": "LiabilityBankruptcyCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityCollectionCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityChargeOffCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityCurrentAdverseCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityPreviousAdverseCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InquiryCount",
+                        "@_Value": "15"
+                     },
+                     {
+                        "@_Name": "PublicRecordCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "DisputeCount",
+                        "@_Value": "0"
+                     }
+                  ]
+               }
+            ],
+            "REGULATORY_PRODUCT": {
+               "@CreditFileID": "CreditFile1",
+               "@BorrowerID": "PC",
+               "@CreditRepositorySourceType": "Experian",
+               "@_SourceType": "OFAC",
+               "@_ResultText": "MARISOL TESTCASE YOB: 1980 EXPERIAN OFAC NAME MATCHING SERVICE: NO MATCH FOUND UNLESS OTHERWISE INDICATED",
+               "@_ResultStatusType": "Clear"
+            }
+         }
+      },
+      "STATUS": {
+         "@_Name": "MLStatus",
+         "@_Description": "READY"
+      }
+   }
+},
+{
+   "@MISMOVersionID": "2.3.1",
+   "RESPONDING_PARTY": {
+      "@_Name": "MCL BETA",
+      "@_StreetAddress": "1600 SUNFLOWER AVE",
+      "@_City": "COSTA MESA",
+      "@_State": "CA",
+      "@_PostalCode": "92626",
+      "CONTACT_DETAIL": [
+         {
+            "@_RoleType": "Work",
+            "@_Type": "Phone",
+            "@_Value": "7147086950"
+         },
+         {
+            "@_RoleType": "Work",
+            "@_Type": "Fax",
+            "@_Value": "7147086956"
+         }
+      ]
+   },
+   "RESPOND_TO_PARTY": {
+      "@_Name": "Customer in Testing",
+      "@_StreetAddress": "1600 SUNFLOWER AVE",
+      "@_City": "COSTA MESA",
+      "@_State": "CA",
+      "@_PostalCode": "92626"
+   },
+   "RESPONSE": {
+      "@ResponseDateTime": "2016-06-23T11:52:30-07",
+      "KEY": [
+         {
+            "@_Name": "ExperianFairIsaac_MinimumValue",
+            "@_Value": "320"
+         },
+         {
+            "@_Name": "ExperianFairIsaac_MaximumValue",
+            "@_Value": "844"
+         },
+         {
+            "@_Name": "CreditScoreRankPercent_CreditResponse1_CreditScore13",
+            "@_Value": "57"
+         },
+         {
+            "@_Name": "FICORiskScoreClassic98_MinimumValue",
+            "@_Value": "336"
+         },
+         {
+            "@_Name": "FICORiskScoreClassic98_MaximumValue",
+            "@_Value": "843"
+         },
+         {
+            "@_Name": "CreditScoreRankPercent_CreditResponse1_CreditScore102",
+            "@_Value": "56"
+         },
+         {
+            "@_Name": "EquifaxBeacon5.0_MinimumValue",
+            "@_Value": "334"
+         },
+         {
+            "@_Name": "EquifaxBeacon5.0_MaximumValue",
+            "@_Value": "818"
+         },
+         {
+            "@_Name": "CreditScoreRankPercent_CreditResponse1_CreditScore148",
+            "@_Value": "57"
+         }
+      ],
+      "RESPONSE_DATA": {
+         "CREDIT_RESPONSE": {
+            "@MISMOVersionID": "2.3.1",
+            "@CreditResponseID": "CreditResponse1",
+            "@CreditReportIdentifier": "198496",
+            "@CreditReportFirstIssuedDate": "2016-06-23",
+            "@CreditReportLastUpdatedDate": "2016-06-23",
+            "@CreditReportMergeType": "Blend",
+            "@CreditReportType": "Merge",
+            "@CreditRatingCodeType": "Experian",
+            "_DATA_INFORMATION": [
+               {
+                  "@_Name": "MORTGAGECREDITLINK",
+                  "@_Number": ""
+               },
+               {
+                  "@_Name": "MCLMismoFramework",
+                  "@_Number": "2.1"
+               }
+            ],
+            "CREDIT_BUREAU": {
+               "@_Name": "MCL BETA",
+               "@_StreetAddress": "1600 SUNFLOWER AVE",
+               "@_City": "COSTA MESA",
+               "@_State": "CA",
+               "@_PostalCode": "92626",
+               "CONTACT_DETAIL": [
+                  {
+                     "@_RoleType": "Work",
+                     "@_Type": "Phone",
+                     "@_Value": "7147086950"
+                  },
+                  {
+                     "@_RoleType": "Work",
+                     "@_Type": "Fax",
+                     "@_Value": "7147086956"
+                  }
+               ]
+            },
+            "CREDIT_REPOSITORY_INCLUDED": {
+               "@_EquifaxIndicator": "Y",
+               "@_ExperianIndicator": "Y",
+               "@_TransUnionIndicator": "Y"
+            },
+            "REQUESTING_PARTY": {
+               "@InternalAccountIdentifier": "#001",
+               "@LenderCaseIdentifier": "API DEMO",
+               "@_Name": "Customer in Testing",
+               "@_StreetAddress": "1600 SUNFLOWER AVE",
+               "@_City": "COSTA MESA",
+               "@_State": "CA",
+               "@_PostalCode": "92626"
+            },
+            "BORROWER": {
+               "@BorrowerID": "PC",
+               "@_BirthDate": "1980-05-27",
+               "@_FirstName": "MARISOL",
+               "@_LastName": "TESTCASE",
+               "@_PrintPositionType": "Borrower",
+               "@_SSN": "000000001",
+               "@_UnparsedName": "MARISOL TESTCASE",
+               "@MaritalStatusType": "Unknown",
+               "_RESIDENCE": {
+                  "@_City": "ANTHILL",
+                  "@_State": "MO",
+                  "@_PostalCode": "65488",
+                  "@_StreetAddress": "220 LOCUST AVE",
+                  "@BorrowerResidencyType": "Current"
+               }
+            },
+            "CREDIT_LIABILITY": [
+               {
+                  "@CreditLiabilityID": "CreditLiability49",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000006",
+                  "@_AccountOpenedDate": "2015-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-05",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Installment",
+                  "@_HighCreditAmount": "31206",
+                  "@_LastActivityDate": "2015-11",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "533",
+                  "@_MonthsRemainingCount": "61",
+                  "@_MonthsReviewedCount": "9",
+                  "@_PastDueAmount": "0",
+                  "@_TermsDescription": "069 months at $533 per month",
+                  "@_TermsMonthsCount": "069",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "28626",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "Automobile",
+                  "_CREDITOR": {
+                     "@_Name": "USAA FEDERAL SAVINGS B"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCC",
+                     "@_StartDate": "2016-04"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability33",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000002",
+                  "@_AccountOpenedDate": "2015-11",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "4000",
+                  "@_HighCreditAmount": "4000",
+                  "@_LastActivityDate": "2016-06",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "10",
+                  "@_MonthsReviewedCount": "7",
+                  "@_PastDueAmount": "0",
+                  "@_TermsDescription": "",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "228",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "CHASE"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability39",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000001",
+                  "@_AccountOpenedDate": "2016-06",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "7500",
+                  "@_HighCreditAmount": "7500",
+                  "@_LastActivityDate": "2016-06",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "1",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "MBNA AMERICA"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability41",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000004",
+                  "@_AccountOpenedDate": "2016-06",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "2300",
+                  "@_HighCreditAmount": "2300",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "1",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "CITI"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability43",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000011",
+                  "@_AccountOpenedDate": "2016-01",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "1000",
+                  "@_HighCreditAmount": "1000",
+                  "@_LastActivityDate": "2016-01",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "6",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Clothing",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "WFNNB/BEALLS"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability23",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_AccountClosedDate": "2013-07",
+                  "@_AccountIdentifier": "ACCT000013",
+                  "@_AccountOpenedDate": "2012-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2013-04",
+                  "@_AccountReportedDate": "2013-07",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "900",
+                  "@_HighCreditAmount": "900",
+                  "@_LastActivityDate": "2013-04",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "09",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "DepartmentAndMailOrder",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "NBGL-MCRAES"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCXXXXXCC",
+                     "@_StartDate": "2013-06"
+                  },
+                  "CREDIT_COMMENT": [
+                     {
+                        "@_SourceType": "TransUnion",
+                        "@_Code": "PAL",
+                        "_Text": "PURCHASED BY ANOTHER LENDER"
+                     },
+                     {
+                        "@_SourceType": "CreditBureau",
+                        "@_Type": "BureauRemarks",
+                        "_Text": "PURCHASED BY ANOTHER LENDER"
+                     }
+                  ],
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability47",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000005",
+                  "@_AccountOpenedDate": "2015-11",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-05",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Installment",
+                  "@_LastActivityDate": "2016-05",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthsReviewedCount": "1",
+                  "@_PastDueAmount": "0",
+                  "@_TermsMonthsCount": "001",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "@CreditLoanType": "Other",
+                  "@CreditLoanTypeOtherDescription": "UtilityCompany",
+                  "_CREDITOR": {
+                     "@_Name": "GTE SOUTHWEST INC"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "CREDIT_COMMENT": {
+                     "@_SourceType": "CreditBureau",
+                     "@_Type": "BureauRemarks",
+                     "_Text": "UTILITY COMPANY"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability45",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000007",
+                  "@_AccountOpenedDate": "2013-03",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "500",
+                  "@_HighCreditAmount": "500",
+                  "@_LastActivityDate": "2014-11",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "39",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "DepartmentAndMailOrder",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "GEMB/JCP"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability29",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2015-10",
+                  "@_AccountIdentifier": "ACCT000012",
+                  "@_AccountOpenedDate": "2015-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2015-10",
+                  "@_AccountReportedDate": "2015-10",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Installment",
+                  "@_HighCreditAmount": "30973",
+                  "@_LastActivityDate": "2015-10",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsRemainingCount": "71",
+                  "@_MonthsReviewedCount": "2",
+                  "@_PastDueAmount": "0",
+                  "@_TermsMonthsCount": "072",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Finance",
+                  "@CreditLoanType": "Automobile",
+                  "_CREDITOR": {
+                     "@_Name": "TOYOTA MOTOR CREDIT"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "C",
+                     "@_StartDate": "2015-09"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability27",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2016-06",
+                  "@_AccountIdentifier": "ACCT000003",
+                  "@_AccountOpenedDate": "2013-07",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2015-06",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "7500",
+                  "@_HighCreditAmount": "7500",
+                  "@_LastActivityDate": "2015-06",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "35",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "DISCOVER FIN SVS LLC"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_COMMENT": [
+                     {
+                        "@_SourceType": "Experian",
+                        "@_Code": "19",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     },
+                     {
+                        "@_SourceType": "CreditBureau",
+                        "@_Type": "BureauRemarks",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     }
+                  ],
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability25",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2016-05",
+                  "@_AccountIdentifier": "ACCT000009",
+                  "@_AccountOpenedDate": "2011-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2016-05",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "1800",
+                  "@_HighCreditAmount": "1800",
+                  "@_LastActivityDate": "2016-05",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "57",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Banking",
+                  "@CreditLoanType": "CreditCard",
+                  "_CREDITOR": {
+                     "@_Name": "CITI"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCXCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_COMMENT": [
+                     {
+                        "@_SourceType": "Experian",
+                        "@_Code": "19",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     },
+                     {
+                        "@_SourceType": "CreditBureau",
+                        "@_Type": "BureauRemarks",
+                        "_Text": "ACCOUNT CLOSED AT CONSUMER'S REQUEST"
+                     }
+                  ],
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability37",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000010",
+                  "@_AccountOpenedDate": "2012-09",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "900",
+                  "@_HighCreditAmount": "900",
+                  "@_LastActivityDate": "2016-02",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "35",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Finance",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "HSBC/MCRAE"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability35",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountIdentifier": "ACCT000008",
+                  "@_AccountOpenedDate": "2015-04",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountReportedDate": "2016-06",
+                  "@_AccountStatusType": "Open",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "1200",
+                  "@_HighCreditAmount": "1200",
+                  "@_LastActivityDate": "2015-11",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "15",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "Finance",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "GEMB/OLD NAVY"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "CCCCCCCCCCCCCC",
+                     "@_StartDate": "2016-05"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditLiabilityID": "CreditLiability31",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_AccountClosedDate": "2014-12",
+                  "@_AccountIdentifier": "ACCT000014",
+                  "@_AccountOpenedDate": "2012-06",
+                  "@_AccountOwnershipType": "Individual",
+                  "@_AccountPaidDate": "2012-10",
+                  "@_AccountReportedDate": "2014-12",
+                  "@_AccountStatusType": "Paid",
+                  "@_AccountType": "Revolving",
+                  "@_CreditLimitAmount": "200",
+                  "@_HighCreditAmount": "200",
+                  "@_LastActivityDate": "2012-10",
+                  "@_ManualUpdateIndicator": "N",
+                  "@_MonthlyPaymentAmount": "0",
+                  "@_MonthsReviewedCount": "31",
+                  "@_PastDueAmount": "0",
+                  "@_TermsSourceType": "Provided",
+                  "@_UnpaidBalanceAmount": "0",
+                  "@CreditBusinessType": "DepartmentAndMailOrder",
+                  "@CreditLoanType": "ChargeAccount",
+                  "_CREDITOR": {
+                     "@_Name": "CATO CORPORATION"
+                  },
+                  "_CURRENT_RATING": {
+                     "@_Code": "C",
+                     "@_Type": "AsAgreed"
+                  },
+                  "_HIGHEST_ADVERSE_RATING": {
+                     "@_Code": "-",
+                     "@_Type": "NoDataAvailable"
+                  },
+                  "_LATE_COUNT": {
+                     "@_30Days": "0",
+                     "@_60Days": "0",
+                     "@_90Days": "0"
+                  },
+                  "_PAYMENT_PATTERN": {
+                     "@_Data": "XXXXXXXXXXXXXXXXXXXXXXXXXCCC",
+                     "@_StartDate": "2014-11"
+                  },
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               }
+            ],
+            "CREDIT_INQUIRY": [
+               {
+                  "@CreditInquiryID": "CreditInquiry51",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_Name": "FISERV CREDSTAR",
+                  "@_Date": "2016-06-18",
+                  "@CreditBusinessType": "Finance",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "MergedData"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry53",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_Name": "MBNA",
+                  "@_Date": "2016-06-12",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Experian",
+                     "@_SubscriberCode": "1217350"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry55",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@_Name": "WFNNB/BEALLS",
+                  "@_Date": "2015-12-29",
+                  "@CreditBusinessType": "Clothing",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Experian",
+                     "@_SubscriberCode": "1350890"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry94",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "CHASE CREDIT",
+                  "@_Date": "2016-06-18",
+                  "@CreditBusinessType": "RealEstateAndPublicAccommodation",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "R 06482329"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry96",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "CITI",
+                  "@_Date": "2016-05-13",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "B 06519225"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry98",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "FIRST USA NA",
+                  "@_Date": "2015-11-21",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "B 00006675"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry100",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@_Name": "CARLOCK TOYO",
+                  "@_Date": "2015-09-03",
+                  "@CreditBusinessType": "Automotive",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "TransUnion",
+                     "@_SubscriberCode": "A 00210492"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry132",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "ANDELER",
+                  "@_Date": "2015-10-31",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "621UE09049"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry134",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "USAA",
+                  "@_Date": "2015-09-04",
+                  "@CreditBusinessType": "Banking",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "650BB12297"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry136",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "CTUPELO",
+                  "@_Date": "2015-09-03",
+                  "@CreditBusinessType": "Automotive",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "234AN25095"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry138",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "TOYOTA CRE",
+                  "@_Date": "2015-09-03",
+                  "@CreditBusinessType": "Finance",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "774FF39515"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry140",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "CINGULR-MS",
+                  "@_Date": "2015-07-18",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "433UT00364"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry142",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "CINGULR-MS",
+                  "@_Date": "2015-07-14",
+                  "@CreditBusinessType": "UtilitiesAndFuel",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "433UT00364"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry144",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "FED GOVT",
+                  "@_Date": "2015-05-23",
+                  "@CreditBusinessType": "Government",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "497VF00148"
+                  }
+               },
+               {
+                  "@CreditInquiryID": "CreditInquiry146",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@_Name": "GEMB/OLDNY",
+                  "@_Date": "2015-04-20",
+                  "@CreditBusinessType": "Finance",
+                  "CREDIT_REPOSITORY": {
+                     "@_SourceType": "Equifax",
+                     "@_SubscriberCode": "404FF09123"
+                  }
+               }
+            ],
+            "CREDIT_FILE": [
+               {
+                  "@CreditFileID": "CreditFile1",
+                  "@BorrowerID": "PC",
+                  "@_ResultStatusType": "FileReturned",
+                  "@CreditRepositorySourceType": "Experian",
+                  "_BORROWER": {
+                     "@_FirstName": "MARISOL",
+                     "@_LastName": "TESTCASE",
+                     "@_SSN": "000000001",
+                     "@_UnparsedName": "MARISOL TESTCASE",
+                     "_ALIAS": [
+                        {
+                           "@_FirstName": "LEMUS",
+                           "@_LastName": "TESTCASE",
+                           "@_UnparsedName": "LEMUS TESTCASE"
+                        },
+                        {
+                           "@_FirstName": "TESTCASE",
+                           "@_LastName": "MARISOL",
+                           "@_UnparsedName": "TESTCASE MARISOL"
+                        }
+                     ],
+                     "_RESIDENCE": [
+                        {
+                           "@_StreetAddress": "220 LOCUST AVE, ANTHILL, MO 65488-0001",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "654880001",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "220",
+                              "@_StreetName": "LOCUST",
+                              "@_StreetSuffix": "AVE"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMACHA RD, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "7144 S",
+                              "@_StreetName": "JAMACHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMOCHA RD, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "7144 S",
+                              "@_StreetName": "JAMOCHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        }
+                     ],
+                     "EMPLOYER": {
+                        "@_Name": "US AIR FORCE",
+                        "@CurrentEmploymentStartDate": "2015-10"
+                     }
+                  }
+               },
+               {
+                  "@CreditFileID": "CreditFile2",
+                  "@BorrowerID": "PC",
+                  "@_ResultStatusType": "FileReturned",
+                  "@CreditRepositorySourceType": "TransUnion",
+                  "@_InfileDate": "2001-06-01",
+                  "_ALERT_MESSAGE": {
+                     "@_AdverseIndicator": "Y",
+                     "@_CategoryType": "FACTARiskScoreValue",
+                     "_Text": "FACTA: Risk Score Value - The Risk Score Value was adversely affected by credit inquiries present in the credit file."
+                  },
+                  "_BORROWER": {
+                     "@_FirstName": "MARISOL",
+                     "@_LastName": "TESTCASE",
+                     "@_MiddleName": "L",
+                     "@_SSN": "000000001",
+                     "@_UnparsedName": "MARISOL L TESTCASE",
+                     "@_AgeYears": "36",
+                     "@_BirthDate": "1980-05-27",
+                     "_ALIAS": {
+                        "@_UnparsedName": "TESTCASE,LEMUS,M"
+                     },
+                     "_RESIDENCE": [
+                        {
+                           "@_StreetAddress": "220 LOCUST AV, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "@BorrowerResidencyType": "Current",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "220",
+                              "@_StreetName": "LOCUST",
+                              "@_StreetSuffix": "AV"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMACHA RD, ANTHILL, MO 65488",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "65488",
+                           "@BorrowerResidencyType": "Prior",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_DirectionPrefix": "S",
+                              "@_HouseNumber": "7144",
+                              "@_StreetName": "JAMACHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        }
+                     ],
+                     "EMPLOYER": {
+                        "@_Name": "FLETCHER MOTORCARS",
+                        "@EmploymentPositionDescription": "CAR SALES"
+                     }
+                  }
+               },
+               {
+                  "@CreditFileID": "CreditFile3",
+                  "@BorrowerID": "PC",
+                  "@_ResultStatusType": "FileReturned",
+                  "@CreditRepositorySourceType": "Equifax",
+                  "@_InfileDate": "2001-06-30",
+                  "_BORROWER": {
+                     "@_AgeYears": "36",
+                     "@_BirthDate": "1980-05-27",
+                     "@_FirstName": "MARISOL",
+                     "@_LastName": "TESTCASE",
+                     "@_MiddleName": "LEMUS",
+                     "@_SSN": "000000001",
+                     "@_UnparsedName": "MARISOL LEMUS TESTCASE",
+                     "_ALIAS": {
+                        "@_FirstName": "LEMUS",
+                        "@_LastName": "TESTCASE",
+                        "@_UnparsedName": "LEMUS TESTCASE"
+                     },
+                     "_RESIDENCE": [
+                        {
+                           "@_StreetAddress": "220 LOCUST AVE, ANTHILL, MO 65488-0001",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "654880001",
+                           "@BorrowerResidencyType": "Current",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "220",
+                              "@_StreetName": "LOCUST",
+                              "@_StreetSuffix": "AVE"
+                           }
+                        },
+                        {
+                           "@_StreetAddress": "7144 S JAMACHA RD, ANTHILL, MO 65488-0001",
+                           "@_City": "ANTHILL",
+                           "@_State": "MO",
+                           "@_PostalCode": "654880001",
+                           "@BorrowerResidencyType": "Prior",
+                           "PARSED_STREET_ADDRESS": {
+                              "@_HouseNumber": "7144 S",
+                              "@_StreetName": "JAMACHA",
+                              "@_StreetSuffix": "RD"
+                           }
+                        }
+                     ]
+                  }
+               }
+            ],
+            "CREDIT_SCORE": [
+               {
+                  "@CreditScoreID": "CreditScore13",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile1",
+                  "@CreditReportIdentifier": "198496",
+                  "@CreditRepositorySourceType": "Experian",
+                  "@_Date": "2016-06-23",
+                  "@_FACTAInquiriesIndicator": "N",
+                  "@_ModelNameType": "ExperianFairIsaac",
+                  "@_Value": "745",
+                  "_FACTOR": [
+                     {
+                        "@_Code": "14",
+                        "@_Text": "LENGTH OF TIME ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "08",
+                        "@_Text": "TOO MANY INQUIRIES LAST 12 MONTHS"
+                     },
+                     {
+                        "@_Code": "09",
+                        "@_Text": "TOO MANY ACCOUNTS RECENTLY OPENED"
+                     }
+                  ]
+               },
+               {
+                  "@CreditScoreID": "CreditScore102",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile2",
+                  "@CreditReportIdentifier": "198496",
+                  "@CreditRepositorySourceType": "TransUnion",
+                  "@_Date": "2016-06-23",
+                  "@_FACTAInquiriesIndicator": "Y",
+                  "@_ModelNameType": "FICORiskScoreClassic98",
+                  "@_Value": "741",
+                  "_FACTOR": [
+                     {
+                        "@_Code": "014",
+                        "@_Text": "LENGTH OF TIME ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "012",
+                        "@_Text": "LENGTH OF TIME REVOLVING ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "008",
+                        "@_Text": "TOO MANY INQUIRIES LAST 12 MONTHS"
+                     },
+                     {
+                        "@_Code": "030",
+                        "@_Text": "TIME SINCE MOST RECENT ACCOUNT OPENING IS TOO SHORT"
+                     },
+                     {
+                        "@_Code": "FA",
+                        "@_Text": "INQUIRIES IMPACTED THE CREDIT SCORE"
+                     }
+                  ]
+               },
+               {
+                  "@CreditScoreID": "CreditScore148",
+                  "@BorrowerID": "PC",
+                  "@CreditFileID": "CreditFile3",
+                  "@CreditReportIdentifier": "198496",
+                  "@CreditRepositorySourceType": "Equifax",
+                  "@_Date": "2016-06-23",
+                  "@_FACTAInquiriesIndicator": "N",
+                  "@_ModelNameType": "EquifaxBeacon5.0",
+                  "@_Value": "743",
+                  "_FACTOR": [
+                     {
+                        "@_Code": "00030",
+                        "@_Text": "TIME SINCE MOST RECENT ACCOUNT OPENING IS TOO SHORT"
+                     },
+                     {
+                        "@_Code": "00014",
+                        "@_Text": "LENGTH OF TIME ACCOUNTS HAVE BEEN ESTABLISHED"
+                     },
+                     {
+                        "@_Code": "00008",
+                        "@_Text": "TOO MANY INQUIRIES LAST 12 MONTHS"
+                     },
+                     {
+                        "@_Code": "00012",
+                        "@_Text": "LENGTH OF TIME REVOLVING ACCOUNTS HAVE BEEN ESTABLISHED"
+                     }
+                  ]
+               }
+            ],
+            "CREDIT_CONSUMER_REFERRAL": [
+               {
+                  "@_Name": "EQUIFAX",
+                  "@_StreetAddress": "PO BOX 740241",
+                  "@_City": "ATLANTA",
+                  "@_State": "GA",
+                  "@_PostalCode": "30374",
+                  "CONTACT_DETAIL": {
+                     "CONTACT_POINT": {
+                        "@_RoleType": "Work",
+                        "@_Type": "Phone",
+                        "@_Value": "8006851111"
+                     }
+                  }
+               },
+               {
+                  "@_Name": "EXPERIAN",
+                  "@_StreetAddress": "PO BOX 4500",
+                  "@_City": "ALLEN",
+                  "@_State": "TX",
+                  "@_PostalCode": "75013",
+                  "CONTACT_DETAIL": {
+                     "CONTACT_POINT": {
+                        "@_RoleType": "Work",
+                        "@_Type": "Phone",
+                        "@_Value": "8883973742"
+                     }
+                  }
+               },
+               {
+                  "@_Name": "TRANSUNION",
+                  "@_StreetAddress": "PO BOX 2000",
+                  "@_City": "CHESTER",
+                  "@_State": "PA",
+                  "@_PostalCode": "19022",
+                  "CONTACT_DETAIL": {
+                     "CONTACT_POINT": {
+                        "@_RoleType": "Work",
+                        "@_Type": "Phone",
+                        "@_Value": "8008884213"
+                     }
+                  }
+               }
+            ],
+            "CREDIT_SUMMARY": [
+               {
+                  "@BorrowerID": "PC",
+                  "@_Name": "MLTradeSummary",
+                  "_DATA_SET": [
+                     {
+                        "@_Name": "LiabilityOldestDate",
+                        "@_Value": "2011-09"
+                     },
+                     {
+                        "@_Name": "LiabilityOldestCreditorName",
+                        "@_Value": "CITI"
+                     },
+                     {
+                        "@_Name": "MortgageCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgageBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgagePayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgagePastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "MortgageHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentCount",
+                        "@_Value": "3"
+                     },
+                     {
+                        "@_Name": "InstallmentBalance",
+                        "@_Value": "28626"
+                     },
+                     {
+                        "@_Name": "InstallmentPayment",
+                        "@_Value": "533"
+                     },
+                     {
+                        "@_Name": "InstallmentPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentHighCredit",
+                        "@_Value": "31206"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherCount",
+                        "@_Value": "1"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InstallmentOtherHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "AutoCount",
+                        "@_Value": "2"
+                     },
+                     {
+                        "@_Name": "AutoBalance",
+                        "@_Value": "28626"
+                     },
+                     {
+                        "@_Name": "AutoPayment",
+                        "@_Value": "533"
+                     },
+                     {
+                        "@_Name": "AutoPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "AutoHighCredit",
+                        "@_Value": "31206"
+                     },
+                     {
+                        "@_Name": "EducationCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "EducationHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "OpenHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "RevolvingCount",
+                        "@_Value": "11"
+                     },
+                     {
+                        "@_Name": "RevolvingBalance",
+                        "@_Value": "228"
+                     },
+                     {
+                        "@_Name": "RevolvingPayment",
+                        "@_Value": "10"
+                     },
+                     {
+                        "@_Name": "RevolvingPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "RevolvingHighCredit",
+                        "@_Value": "17400"
+                     },
+                     {
+                        "@_Name": "UnknownCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownBalance",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownPayment",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "UnknownHighCredit",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityCount",
+                        "@_Value": "14"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityBalance",
+                        "@_Value": "28854"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityPayment",
+                        "@_Value": "543"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityPastDue",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "TotalLiabilityHighCredit",
+                        "@_Value": "48606"
+                     }
+                  ]
+               },
+               {
+                  "@BorrowerID": "PC",
+                  "@_Name": "MLDerogatorySummary",
+                  "_DATA_SET": [
+                     {
+                        "@_Name": "TotalSecuredLoanBalance",
+                        "@_Value": "28626"
+                     },
+                     {
+                        "@_Name": "TotalUnsecuredLoanBalance",
+                        "@_Value": "228"
+                     },
+                     {
+                        "@_Name": "TotalHighCredit",
+                        "@_Value": "48606"
+                     },
+                     {
+                        "@_Name": "DebtHighCredit",
+                        "@_Value": "59%"
+                     },
+                     {
+                        "@_Name": "Day30",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "Day60",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "Day90",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "DerogOtherCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilitySatisfactoryCount",
+                        "@_Value": "14"
+                     },
+                     {
+                        "@_Name": "LiabilityBankruptcyCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityCollectionCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityChargeOffCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityCurrentAdverseCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "LiabilityPreviousAdverseCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "InquiryCount",
+                        "@_Value": "15"
+                     },
+                     {
+                        "@_Name": "PublicRecordCount",
+                        "@_Value": "0"
+                     },
+                     {
+                        "@_Name": "DisputeCount",
+                        "@_Value": "0"
+                     }
+                  ]
+               }
+            ],
+            "REGULATORY_PRODUCT": {
+               "@CreditFileID": "CreditFile1",
+               "@BorrowerID": "PC",
+               "@CreditRepositorySourceType": "Experian",
+               "@_SourceType": "OFAC",
+               "@_ResultText": "MARISOL TESTCASE YOB: 1980 EXPERIAN OFAC NAME MATCHING SERVICE: NO MATCH FOUND UNLESS OTHERWISE INDICATED",
+               "@_ResultStatusType": "Clear"
+            }
+         }
+      },
+      "STATUS": {
+         "@_Name": "MLStatus",
+         "@_Description": "READY"
+      }
+   }
+}
+]

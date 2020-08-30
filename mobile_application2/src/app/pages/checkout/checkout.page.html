@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()" slot="icon-only">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card  *ngIf="package" name="checkoutpackage" padding>
+    <ion-card-header color="primary">Preview order</ion-card-header>
+    <ion-card-content >
+       <ion-item>
+    <p>Package :<b>{{package.type}}</b>  </p>
+     </ion-item>
+        <ion-item *ngIf="package.artwork" >
+    <p>Artwork :<b>{{package.artwork}}</b>  </p>
+     </ion-item>
+      <ion-item>
+    <p>Amount :<b>${{package.amount}}</b>  </p>
+     </ion-item>
+     <ion-item *ngIf="iscoupon">
+      <form (ngSubmit)="applycoupon()">
+     
+        
+        <ion-label position="fixed">Enter coupon</ion-label>
+         
+ 
+       <!--  <ion-item> -->
+        
+       
+         <input [(ngModel)]="coupon" name="coupon">
+       
+      <!-- </ion-item> -->
+       <ion-button color="success" type="submit" [disabled]="disable" block>Appy </ion-button>
+    </form>
+       
+        
+     </ion-item>
+     <div>
+
+        <!-- <img src="assets/img/image-backgorund.jpg" padding style="width:100%"> -->
+         <ion-item-divider *ngIf="myFile">
+    <ion-label>
+      Current Image
+    </ion-label>
+  </ion-item-divider>
+ <div  *ngIf="myFile  && !croped && mobile && !saved">
+
+   <img class="selected_image" [src]="myFile" width="100%" height="100%" padding>
+
+ </div>
+  <div  *ngIf="myFile && !croped && !saved && !isCordova">
+
+   <img class="selected_image" [src]="myFile" width="100%" height="100%" padding>
+
+ </div>
+  <div style="padding:20px;" *ngIf="myFile && croped && mobile && !saved">
+      <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-button ion-button slot="icon-only"  (click)="closecrop()">
+      <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crop Image</ion-title>
+    <ion-buttons slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="clear()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+    <!-- <img class="selected_image" [src]="myFile" width="100%" height="100%" padding> -->
+    <angular-cropper  #angularCropper [imageUrl]="myFile" *ngIf="myFile"></angular-cropper>
+  
+
+  </div>
+
+  <div style="padding:20px;"  *ngIf="myFile && croped && !saved && !isCordova">
+      <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-button ion-button slot="icon-only"  (click)="reset()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crop Image</ion-title>
+    <ion-buttons slot="end">
+
+       <ion-button ion-button slot="icon-only" (click)="clear()">
+        Reset
+      </ion-button>
+      <ion-button ion-button slot="icon-only" (click)="save()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+     <!-- <img class="selected_image" [src]="myFile"  width="100%" height="100%" padding> -->
+    
+      <angular-cropper  #angularCropper  [imageUrl]="myFile" *ngIf="myFile"></angular-cropper>
+
+  </div>
+  <div *ngIf="saved">
+    <!-- <img class="selected_image" [src]="myFile" padding> -->
+      <angular-cropper #angularCropper  [imageUrl]="myFile" *ngIf="myFile"></angular-cropper>
+
+  </div>
+
+
+     </div>
+  </ion-card-content>
+ </ion-card>
+    <!-- <ion-button [disabled]="!card" (click)="makePayment()" expand="block" color="success">Pay Now with Existing card -->
+      <ion-button  *ngIf="card" (click)="makePayment()" expand="block" color="success">Pay Now with ******{{card.card.last4}}
+      <ion-icon name="checkmark-circle"> </ion-icon>
+     <!--  </ion-button>
+        <ion-button  *ngIf="card && !card.card.last4 && !firstorder" (click)="makePayment()" expand="block" color="success">Pay Now with existing card
+      <ion-icon name="checkmark-circle"> </ion-icon> -->
+
+<!--         <ion-button  (click)="makePayment()" expand="block" color="success">Pay Now <ion-icon
+      name="checkmark-circle">
+    </ion-icon> -->
+  </ion-button>
+  <!--   <ion-button  *ngIf="card && firstorder" (click)="makePayment()" expand="block" color="success">place order
+      <ion-icon name="checkmark-circle"> </ion-icon>
+        <ion-button  (click)="makePayment()" expand="block" color="success">Pay Now <ion-icon
+      name="checkmark-circle">
+    </ion-icon>
+  </ion-button> -->
+  <ion-button (click)="addCreditCard()" *ngIf="!isCardAvaliable" expand="block" color="secondary">Add Credit Card
+    </ion-button>
+    <ion-button (click)="addCreditCard()"   *ngIf="isCardAvaliable" expand="block" color="secondary">Update Credit Card
+  </ion-button>
+<!--   <ion-button (click)="addCreditCard()" *ngIf="!isCardAvaliable" expand="block" color="secondary">use New Credit Card
+  </ion-button> -->
+
+</ion-content>
